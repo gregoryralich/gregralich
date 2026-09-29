@@ -1,79 +1,569 @@
-<!doctype html>
+<!DOCTYPE html>
+
+<!--
+=========================================================
+GREGRALICH.COM
+=========================================================
+
+Welcome to your website.
+
+This file — index.html — contains the CONTENT and STRUCTURE
+of your homepage.
+
+Think of it roughly like this:
+
+    index.html = WHAT is on the page
+    style.css  = HOW those things look
+    /images    = WHERE your pictures live
+
+Anything written between these funny brackets:
+
+    < !-- like this -- >
+
+is a COMMENT.
+
+Comments do NOT appear on the website.
+
+I'm going to use lots of comments throughout this file
+so you can poke around and learn what everything does.
+
+Don't be afraid to break things.
+
+GitHub remembers your previous versions, so experimenting
+is exactly what you should be doing.
+=========================================================
+-->
+
+
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Greg Ralich — work, projects, people, places, and things worth making.">
-  <title>Greg Ralich</title>
-  <link rel="stylesheet" href="style.css">
+
+    <!--
+    The HEAD contains information ABOUT the webpage.
+    Most of this isn't actually visible on the page.
+    -->
+
+    <meta charset="UTF-8">
+
+    <!-- Makes the site behave properly on phones -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- This is what appears in the browser tab -->
+    <title>Greg Ralich</title>
+
+    <!--
+    This connects this HTML file to style.css.
+
+    Delete this line and the website will suddenly look
+    like a document from 1996.
+
+    Try it sometime.
+    -->
+    <link rel="stylesheet" href="style.css">
+
 </head>
+
+
 <body>
-  <header class="site-header">
-    <a class="name" href="#top">Greg Ralich</a>
-    <nav aria-label="Main navigation">
-      <a href="#about">About</a>
-      <a href="#work">Things</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
 
-  <main id="top">
-    <section class="hero">
-      <p class="eyebrow">My web site</p>
-      <h1>Greg<br>Ralich</h1>
-      <p class="intro">I like useful work, good people, bicycles and helping worthwhile ideas get moving.</p>
-      <a class="down" href="#about">Keep scrolling ↓</a>
-    </section>
 
-    <section id="about" class="section text-section">
-      <p class="section-number">01</p>
-      <div>
-        <h2>About</h2>
-        <p class="big-copy">This site is a work in progress — a home for my projects, media, stories, and things I care about.</p>
-      </div>
-    </section>
+<!-- =====================================================
+     HERO / INTRODUCTION
 
-    <section id="work" class="section">
-      <p class="section-number">02</p>
-      <div class="section-content">
-        <h2>Things worth doing</h2>
-        <div class="project-grid">
-          <article class="project-card">
-            <p class="project-type">People</p>
-            <h3>Helping out</h3>
-            <p>Work that leaves somebody, someplace, or something a little better than it was.</p>
-          </article>
-          <article class="project-card">
-            <p class="project-type">Making</p>
-            <h3>Building things</h3>
-            <p>Spaces, machines, systems, repairs, experiments, and simple solutions to real problems.</p>
-          </article>
-          <article class="project-card">
-            <p class="project-type">Outside</p>
-            <h3>Going places</h3>
-            <p>Bicycles, the woods, old buildings, long days, and the stories that come along with them.</p>
-          </article>
-        </div>
+     "hero" is web-design jargon for the big first thing
+     someone sees when they arrive.
 
-        <div class="future-photo">
-          <span>YOUR PHOTO / SCAN / DRAWING GOES HERE SOMEDAY</span>
-        </div>
-      </div>
-    </section>
+     Yours doesn't need to sell anything.
 
-    <section id="contact" class="section contact-section">
-      <p class="section-number">03</p>
-      <div>
-        <h2>Say hello.</h2>
-        <p class="big-copy">Good projects usually start with a conversation.</p>
-        <!-- Replace the address below with your preferred email address. -->
-        <a class="contact-link" href="mailto:gregralich@gmail.com">hello@gregralich.com</a>
-      </div>
-    </section>
-  </main>
+     It just needs to establish:
+          Greg Ralich
+          This is my little corner of the internet.
+====================================================== -->
 
-  <footer>
-    <p>...</p>
-  </footer>
+<header class="hero">
+
+    <p class="eyebrow">Amesbury, Massachusetts</p>
+
+    <h1>Greg<br>Ralich</h1>
+
+    <p class="intro">
+        I like making things work, fixing things that don't,
+        riding bicycles, helping people, and getting excited
+        about good ideas.
+    </p>
+
+</header>
+
+
+
+<!-- =====================================================
+     A NOTE ABOUT <section>
+
+     A <section> is basically just a container.
+
+     Think of your webpage as a long piece of butcher paper.
+
+     Each section is another area you've taped onto it.
+
+     You can have 3 sections.
+     You can have 100 sections.
+
+     They can all look completely different.
+====================================================== -->
+
+
+<section class="text-section">
+
+    <p class="section-number">01</p>
+
+    <h2>Things I'm interested in.</h2>
+
+    <p>
+        Bicycles. Old buildings. Useful machines.
+        The outdoors. Making complicated things simpler.
+        Helping people learn something new.
+    </p>
+
+    <!--
+    TRY THIS:
+
+    Change the sentence above in GitHub.
+
+    Commit the change.
+
+    Watch Cloudflare automatically rebuild the website.
+
+    That's the basic workflow for almost everything
+    we're going to do.
+    -->
+
+</section>
+
+
+
+<!-- =====================================================
+     PROJECT / STORY SECTION
+
+     Eventually this could introduce things you've done.
+
+     DON'T think "resume."
+
+     Think:
+
+         things worth telling someone about
+
+     Examples:
+
+         Tumaini Cycling Academy
+         Greentown Labs
+         the NH schoolhouse
+         bicycles you've rebuilt
+         your Waste interviews
+         weird prototypes
+         volunteer projects
+         things you're learning
+====================================================== -->
+
+
+<section class="project">
+
+    <p class="section-number">02</p>
+
+    <h2>Things worth doing.</h2>
+
+    <p>
+        This is where a project or story can eventually live.
+        Some might be serious. Some might be small.
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     ADDING A PHOTO
+
+     This code is currently COMMENTED OUT.
+
+     That means the browser ignores it.
+
+     When you have a picture called:
+
+         bike.jpg
+
+     put it inside your /images folder.
+
+     Then remove the comment marks around the code below.
+
+     IMAGE CODE:
+
+     <img src="images/bike.jpg"
+          alt="A description of the photograph">
+
+     -----------------------------------------------------
+
+     src = SOURCE
+
+     It tells the browser where the file lives.
+
+     "images/bike.jpg" means:
+
+          look in the images folder
+                 ↓
+          find bike.jpg
+
+
+     alt = alternative text
+
+     It describes the image for screen readers,
+     search engines, or situations where the image
+     doesn't load.
+
+====================================================== -->
+
+
+
+<!-- =====================================================
+     BIG PHOTOGRAPH IDEA
+
+     Eventually we could do something like:
+
+     <section class="full-photo">
+
+         <img src="images/bike.jpg"
+              alt="Greg riding a bicycle">
+
+     </section>
+
+     Then style .full-photo in CSS to make the image
+     enormous.
+
+====================================================== -->
+
+
+
+<section class="text-section">
+
+    <p class="section-number">03</p>
+
+    <h2>Making things.</h2>
+
+    <p>
+        Machines, spaces, bicycles, prototypes, buildings,
+        signs, systems, websites — whatever seems useful.
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     HOW LINKS WORK
+
+     The HTML tag for a link is <a>
+
+     Example:
+
+     <a href="https://example.com">Click this</a>
+
+                 ↑                      ↑
+            destination          words people see
+
+
+     You could link to:
+
+     Instagram
+     LinkedIn
+     Tumaini
+     an article
+     another project page
+     a YouTube video
+     basically anything.
+====================================================== -->
+
+
+
+<!-- =====================================================
+     VIDEO
+
+     YouTube and Vimeo make embedding video very easy.
+
+     On YouTube:
+
+     Share → Embed
+
+     You'll get code beginning with:
+
+         <iframe ...
+
+     Paste that iframe into a section here.
+
+     Later we'll use CSS to make it responsive and beautiful.
+====================================================== -->
+
+
+
+<!-- =====================================================
+     THE SCRAPBOOK IDEA
+
+     THIS is where I think your site could eventually
+     become really interesting.
+
+     Imagine scrolling and suddenly encountering:
+
+       photograph
+
+             handwritten note
+
+       giant sentence
+
+                   old drawing
+
+       little story
+
+             video
+
+       newspaper clipping
+
+                   bike photograph
+
+       technical diagram
+
+
+     HTML does NOT require everything to look uniform.
+
+     We can intentionally make different classes:
+
+         class="note"
+         class="polaroid"
+         class="big-photo"
+         class="tiny-caption"
+         class="drawing"
+         class="quote"
+         class="video"
+
+     Then style each one differently in style.css.
+
+====================================================== -->
+
+
+<section class="scrapbook">
+
+    <p class="section-number">04</p>
+
+    <h2>A place for unfinished things.</h2>
+
+    <p>
+        Notes, photographs, experiments, ideas,
+        things I'm learning and things I'm trying to understand.
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     HANDWRITTEN NOTES / SCANS
+
+     You can literally photograph or scan something you've
+     written and treat it exactly like a photograph.
+
+     Example:
+
+     <img
+        class="handwritten"
+        src="images/note-about-bikes.jpg"
+        alt="Handwritten notes about bicycles"
+     >
+
+     CSS can rotate it slightly, add a shadow, overlap it
+     with another photograph, etc.
+
+     This is one way we can make the site feel much less
+     like a corporate website.
+====================================================== -->
+
+
+
+<!-- =====================================================
+     MAKING ANOTHER PAGE
+
+     Someday Tumaini might deserve its own page.
+
+     You could create:
+
+         tumaini.html
+
+     right next to index.html.
+
+     Then link to it:
+
+         <a href="tumaini.html">Tumaini Cycling Academy</a>
+
+
+     Eventually we might organize things:
+
+         /projects
+             tumaini.html
+             schoolhouse.html
+             waste.html
+
+     But DON'T worry about that yet.
+
+     A giant homepage is perfectly fine.
+====================================================== -->
+
+
+
+<!-- =====================================================
+     EXPERIMENT AREA
+
+     This section exists specifically for messing around.
+
+     Copy things.
+     Delete things.
+     Add nonsense.
+     Change class names.
+
+     Then go into style.css and see what happens.
+
+====================================================== -->
+
+
+<section class="experiment">
+
+    <p class="section-number">05</p>
+
+    <h2>Currently figuring out...</h2>
+
+    <p>
+        What should go here?
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+
+     The footer is simply the bottom of the webpage.
+
+     Eventually we could put:
+
+     email
+     Instagram
+     LinkedIn
+     GitHub
+     location
+     a strange quote
+     absolutely nothing
+
+====================================================== -->
+
+
+<footer>
+
+    <p>Greg Ralich</p>
+
+    <p>
+        Made by hand, more or less.
+    </p>
+
+    <!--
+    EMAIL LINK EXAMPLE:
+
+    <a href="mailto:YOUR_EMAIL_HERE">Email me</a>
+    -->
+
+</footer>
+
+
+
+<!-- =====================================================
+     YOUR NEXT EXPERIMENTS
+
+     You don't need to do these all at once.
+
+     1. CHANGE SOME WORDS
+        Find text above and rewrite it.
+
+     2. ADD ONE PHOTO
+        Upload it to /images and use <img>.
+
+     3. ADD A LINK
+        Try linking to Tumaini or something you like.
+
+     4. OPEN style.css
+        Find a font-size and change it dramatically.
+
+        40px → 100px
+
+        See what happens.
+
+     5. CHANGE SPACING
+
+        Look for:
+
+            margin
+            padding
+
+        Make them huge or tiny.
+
+     6. CREATE A NEW SECTION
+
+        Copy:
+
+        <section class="text-section">
+
+            <h2>My new thing</h2>
+
+            <p>
+                Something interesting goes here.
+            </p>
+
+        </section>
+
+        Paste it somewhere else in this file.
+
+     7. INVENT A CLASS
+
+        Change:
+
+            class="text-section"
+
+        to:
+
+            class="bike-story"
+
+        Then create this in style.css:
+
+            .bike-story {
+                font-size: 30px;
+            }
+
+
+     THAT RELATIONSHIP IS IMPORTANT:
+
+             HTML
+               ↓
+         class="bike-story"
+
+               ↕
+               
+             CSS
+               ↓
+         .bike-story { }
+
+
+     HTML says WHAT something is.
+
+     CSS says HOW that thing should look.
+
+
+====================================================== -->
+
+
 </body>
 </html>
