@@ -10,7 +10,7 @@
   --cream: #f2eddd;
   --soft-green: #d9dfcf;
   --line: rgba(242, 237, 221, 0.35);
-  --max-width: 1180px;
+  --max-width: 1000px;
 }
 
 * { box-sizing: border-box; }
@@ -30,7 +30,7 @@ a { color: inherit; }
 .site-header {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 28px 30px;
+  padding: 28px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -58,7 +58,7 @@ nav a:hover { text-decoration: underline; }
   max-width: var(--max-width);
   min-height: 82vh;
   margin: 0 auto;
-  padding: 80px 30px 70px;
+  padding: 80px 40px 70px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -100,7 +100,7 @@ nav a:hover { text-decoration: underline; }
 .section {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 110px 30px;
+  padding: 110px 40px;
   display: grid;
   grid-template-columns: 100px 1fr;
   gap: 30px;
