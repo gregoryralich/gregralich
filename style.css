@@ -206,3 +206,20 @@ footer p {
 .section p {
   overflow-wrap: break-word;
 }
+
+/* Keep headings and paragraphs together */
+.section-content {
+  min-width: 0;
+}
+
+/* Prevent text from extending off the screen */
+.section h2 {
+  overflow-wrap: normal;
+  font-size: clamp(2.5rem, 5vw, 5rem);
+}
+
+.section-content p {
+  max-width: 750px;
+  font-size: clamp(1.2rem, 2vw, 1.7rem);
+  line-height: 1.5;
+}
