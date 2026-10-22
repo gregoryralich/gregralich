@@ -1,0 +1,34 @@
+/* Cross-Country archive palette — edit these colors to restyle all five pages. */
+:root {
+  --cc-purple: #332455;
+  --cc-purple-light: #48336f;
+  --cc-yellow: #ffe477;
+  --cc-green: #67e29b;
+  --cc-paper: #f8f2df;
+}
+
+body { background: var(--cc-purple); color: var(--cc-paper); }
+.cc-header { border-bottom-color: var(--cc-green); }
+.cc-header h1 { color: var(--cc-yellow); }
+.cc-eyebrow { color: var(--cc-green); font-weight: 700; }
+.cc-header p { color: var(--cc-paper); }
+.cc-post { border-bottom-color: var(--cc-green); }
+.cc-post-meta { color: var(--cc-yellow); font-weight: 700; font-size: 14px; letter-spacing: .045em; }
+.cc-post-meta a { color: var(--cc-green); text-decoration: underline; text-underline-offset: 4px; }
+.cc-post-meta a:hover, .cc-post-content a:hover { color: var(--cc-yellow); }
+.cc-post-content a, .cc-jump a, .cc-footer a { color: var(--cc-green); }
+.cc-post-content blockquote { border-left-color: var(--cc-green); }
+.cc-pagination { gap: 9px; }
+.cc-pagination a, .cc-pagination span {
+  color: var(--cc-yellow);
+  border-color: var(--cc-green);
+  background: var(--cc-purple-light);
+  padding: 9px 13px;
+}
+.cc-pagination a:hover { background: var(--cc-green); color: var(--cc-purple); }
+.cc-pagination [aria-current="page"] {
+  background: var(--cc-yellow);
+  border-color: var(--cc-yellow);
+  color: var(--cc-purple);
+}
+a:focus-visible { outline-color: var(--cc-yellow); }
