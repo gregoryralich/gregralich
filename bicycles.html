@@ -32,6 +32,15 @@
     .bike-note h3 { font-size: 1.35rem; font-weight: 400; margin: 12px 0; }
     .bike-note p { margin: 0; }
     .bike-bottom { font: .8rem Arial, sans-serif; border-top: 1px solid var(--line); padding: 28px 0; }
+
+    /* WHITE MOUNTAINS REELS: two columns on desktop, one on phones.
+       Instagram controls the appearance inside each embedded player. */
+    .reel-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin: 32px 0 12px; align-items: start; }
+    .reel-item { min-width: 0; display: flex; justify-content: center; }
+    .reel-item .instagram-media { width: 100% !important; max-width: 540px !important; min-width: 0 !important; margin: 0 auto !important; }
+    .white-mountains-story { margin-top: 35px; }
+    .white-mountains-story h3 { font-size: 1.75rem; font-weight: 400; margin: 0 0 12px; }
+    @media (max-width: 700px) { .reel-grid { grid-template-columns: 1fr; gap: 26px; } }
     @media (max-width: 700px) {
       .bike-page { padding: 0 22px 65px; }
       .bike-hero { padding: 65px 0 70px; }
@@ -67,14 +76,10 @@
       <p class="bike-section-intro">A few trips, long days, short detours, and places reached by bicycle.</p>
       <div class="bike-grid">
         <article class="bike-card">
-          <!-- Placeholder until you have a ride photograph. Replace
-               the entire div with an <img> as shown in the next card. -->
           <div class="bike-placeholder">Photo coming soon<br>White Mountains, NH</div>
           <p class="bike-meta">Ride journal · New Hampshire</p>
           <h3>Into the White Mountains</h3>
-          <p>A home for photographs and notes from rides through New Hampshire: the route, the weather, the little discoveries.</p>
-          <!-- When you write a full story, create a separate HTML page
-               and link it here, e.g. href="rides/white-mountains.html". -->
+          <p>Photographs and notes from rides through New Hampshire: the route, the weather, and the little discoveries.</p>
         </article>
         <article class="bike-card">
           <div class="bike-placeholder">Your next ride photograph</div>
@@ -82,6 +87,54 @@
           <h3>The next good ride</h3>
           <p>Where did you go? What did you find? A few sentences are enough to start an entry.</p>
         </article>
+      </div>
+
+      <!-- =====================================================
+        WHITE MOUNTAINS INSTAGRAM REELS
+        To change a reel, replace its URL in BOTH places:
+        data-instgrm-permalink and the <a href> fallback link.
+        To add a fifth reel, copy one entire reel-item div.
+        The Instagram script is loaded ONCE at the end of the page.
+        Instagram may not load in browsers blocking third-party content;
+        the direct link remains available in that case.
+      ====================================================== -->
+      <div class="white-mountains-story">
+        <h3>White Mountains — four reels</h3>
+        <p>Four short films from the ride. Watch them here or open them directly on Instagram.</p>
+        <div class="reel-grid">
+          <!-- REEL 1 -->
+          <div class="reel-item">
+            <blockquote class="instagram-media"
+              data-instgrm-permalink="https://www.instagram.com/reel/Det9s_bxqZ_/"
+              data-instgrm-version="14">
+              <a href="https://www.instagram.com/reel/Det9s_bxqZ_/" target="_blank" rel="noopener noreferrer">Watch White Mountains reel 1 on Instagram</a>
+            </blockquote>
+          </div>
+          <!-- REEL 2 -->
+          <div class="reel-item">
+            <blockquote class="instagram-media"
+              data-instgrm-permalink="https://www.instagram.com/reel/DepbTJxhdH3/"
+              data-instgrm-version="14">
+              <a href="https://www.instagram.com/reel/DepbTJxhdH3/" target="_blank" rel="noopener noreferrer">Watch White Mountains reel 2 on Instagram</a>
+            </blockquote>
+          </div>
+          <!-- REEL 3 -->
+          <div class="reel-item">
+            <blockquote class="instagram-media"
+              data-instgrm-permalink="https://www.instagram.com/reel/DekpQS8h3HY/"
+              data-instgrm-version="14">
+              <a href="https://www.instagram.com/reel/DekpQS8h3HY/" target="_blank" rel="noopener noreferrer">Watch White Mountains reel 3 on Instagram</a>
+            </blockquote>
+          </div>
+          <!-- REEL 4 -->
+          <div class="reel-item">
+            <blockquote class="instagram-media"
+              data-instgrm-permalink="https://www.instagram.com/reel/Dejiq-XBm7T/"
+              data-instgrm-version="14">
+              <a href="https://www.instagram.com/reel/Dejiq-XBm7T/" target="_blank" rel="noopener noreferrer">Watch White Mountains reel 4 on Instagram</a>
+            </blockquote>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -138,5 +191,7 @@
     </section>
     <footer class="bike-bottom"><a href="index.html">← Back to the homepage</a> · Made by hand, more or less.</footer>
   </main>
+  <!-- Instagram transforms the four blockquotes into playable reels. -->
+  <script async src="https://www.instagram.com/embed.js"></script>
 </body>
 </html>
