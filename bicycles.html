@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bicycle rides, repairs, old bikes, and field notes from Greg Ralich.">
+  <title>Bicycles — Greg Ralich</title>
+  <!-- Reuse the same stylesheet as your homepage. -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* BICYCLE PAGE ONLY. Move these rules to style.css later if you prefer. */
+    .bike-page { max-width: 1000px; margin: 0 auto; padding: 0 40px 100px; }
+    .bike-nav { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 30px 0; border-bottom: 1px solid var(--line); font: 0.8rem Arial, sans-serif; letter-spacing: .07em; text-transform: uppercase; }
+    .bike-nav a { text-underline-offset: 5px; }
+    .bike-hero { padding: 95px 0 100px; }
+    .bike-kicker, .bike-meta { font: .75rem Arial, sans-serif; letter-spacing: .1em; text-transform: uppercase; }
+    .bike-hero h1 { font-size: clamp(4rem, 12vw, 9rem); font-weight: 400; letter-spacing: -.065em; line-height: .9; margin: 20px 0 35px; overflow-wrap: anywhere; }
+    .bike-lead { font-size: clamp(1.3rem, 2.7vw, 2rem); max-width: 680px; line-height: 1.35; }
+    .bike-section { border-top: 1px solid var(--line); padding: 65px 0 80px; }
+    .bike-section h2 { font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1; letter-spacing: -.04em; font-weight: 400; margin: 0 0 20px; }
+    .bike-section-intro { max-width: 640px; margin-bottom: 38px; }
+    .bike-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 35px 25px; }
+    .bike-card { min-width: 0; display: flex; flex-direction: column; }
+    .bike-card img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid var(--line); background: var(--dark-green); }
+    .bike-card h3 { font-size: 1.75rem; line-height: 1.1; font-weight: 400; margin: 14px 0 10px; }
+    .bike-card p { margin: 0 0 14px; }
+    .bike-card .bike-meta { margin-top: 16px; opacity: .75; }
+    .bike-card a { margin-top: auto; text-underline-offset: 5px; }
+    .bike-placeholder { aspect-ratio: 4 / 3; border: 1px dashed var(--line); display: grid; place-items: center; padding: 25px; text-align: center; font: .75rem Arial, sans-serif; letter-spacing: .08em; text-transform: uppercase; }
+    .bike-notes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+    .bike-note { border-top: 1px solid var(--line); padding-top: 16px; }
+    .bike-note h3 { font-size: 1.35rem; font-weight: 400; margin: 12px 0; }
+    .bike-note p { margin: 0; }
+    .bike-bottom { font: .8rem Arial, sans-serif; border-top: 1px solid var(--line); padding: 28px 0; }
+    @media (max-width: 700px) {
+      .bike-page { padding: 0 22px 65px; }
+      .bike-hero { padding: 65px 0 70px; }
+      .bike-section { padding: 50px 0 55px; }
+      .bike-grid, .bike-notes { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main class="bike-page">
+    <nav class="bike-nav" aria-label="Bicycle page navigation">
+      <a href="index.html">← Greg Ralich</a>
+      <a href="#rides">Rides</a>
+      <a href="#workshop">Workshop</a>
+      <a href="#notes">Notes</a>
+    </nav>
+
+    <header class="bike-hero">
+      <p class="bike-kicker">A rolling archive / MA · NH · Elsewhere</p>
+      <h1>Bicycles<br>&amp; other<br>detours.</h1>
+      <p class="bike-lead">Rides worth remembering, bicycles worth fixing, and the things you notice when you spend a lot of time on two wheels.</p>
+    </header>
+
+    <!-- =====================================================
+      RIDES: To add a ride, COPY an entire <article>...</article>
+      block below and paste it inside the bike-grid.
+      Change the title, date, text, image path, and link.
+      Image files should be uploaded to GitHub's /images folder.
+      For example: images/white-mountains-ride.jpg
+    ====================================================== -->
+    <section class="bike-section" id="rides">
+      <h2>Out riding.</h2>
+      <p class="bike-section-intro">A few trips, long days, short detours, and places reached by bicycle.</p>
+      <div class="bike-grid">
+        <article class="bike-card">
+          <!-- Placeholder until you have a ride photograph. Replace
+               the entire div with an <img> as shown in the next card. -->
+          <div class="bike-placeholder">Photo coming soon<br>White Mountains, NH</div>
+          <p class="bike-meta">Ride journal · New Hampshire</p>
+          <h3>Into the White Mountains</h3>
+          <p>A home for photographs and notes from rides through New Hampshire: the route, the weather, the little discoveries.</p>
+          <!-- When you write a full story, create a separate HTML page
+               and link it here, e.g. href="rides/white-mountains.html". -->
+        </article>
+        <article class="bike-card">
+          <div class="bike-placeholder">Your next ride photograph</div>
+          <p class="bike-meta">Ride journal · Add a date</p>
+          <h3>The next good ride</h3>
+          <p>Where did you go? What did you find? A few sentences are enough to start an entry.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- =====================================================
+      WORKSHOP: These cards work exactly like ride cards.
+      Add a photo with:
+      <img src="images/your-bike-photo.jpg" alt="Describe the bike" loading="lazy">
+      Keep the image inside its <article> block.
+    ====================================================== -->
+    <section class="bike-section" id="workshop">
+      <h2>In the workshop.</h2>
+      <p class="bike-section-intro">Old frames, good parts, mysterious noises, and the satisfaction of making something work again.</p>
+      <div class="bike-grid">
+        <article class="bike-card">
+          <div class="bike-placeholder">Add a photo of the Colnago</div>
+          <p class="bike-meta">Bicycle archive · Vintage steel</p>
+          <h3>1984 Colnago Super</h3>
+          <p>A place for the bicycle's history, components, repairs, and the details that make it special.</p>
+        </article>
+        <article class="bike-card">
+          <div class="bike-placeholder">Add a photo of the Fat Chance</div>
+          <p class="bike-meta">Bicycle archive · Mountain bike</p>
+          <h3>Wicked Fat Chance</h3>
+          <p>Photographs, identifying details, and notes from keeping an interesting old mountain bike rolling.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- =====================================================
+      QUICK NOTES: For small observations, you don't need a photo.
+      Copy one <article class="bike-note"> block to add another.
+      This is a good place for fixes, finds, parts, and ideas.
+    ====================================================== -->
+    <section class="bike-section" id="notes">
+      <h2>Loose spokes.</h2>
+      <p class="bike-section-intro">Small notes that don't need a whole story.</p>
+      <div class="bike-notes">
+        <article class="bike-note">
+          <p class="bike-meta">Workshop note</p>
+          <h3>A stubborn drivetrain</h3>
+          <p>A spot for lessons learned from tuning, adjusting, and chasing down odd noises.</p>
+        </article>
+        <article class="bike-note">
+          <p class="bike-meta">Good finds</p>
+          <h3>Interesting old bicycles</h3>
+          <p>A running record of unusual bikes found at auctions, estate sales, and elsewhere.</p>
+        </article>
+        <article class="bike-note">
+          <p class="bike-meta">Field note</p>
+          <h3>What caught my eye</h3>
+          <p>Roadside details, routes worth sharing, and ideas for the next ride.</p>
+        </article>
+      </div>
+    </section>
+    <footer class="bike-bottom"><a href="index.html">← Back to the homepage</a> · Made by hand, more or less.</footer>
+  </main>
+</body>
+</html>
