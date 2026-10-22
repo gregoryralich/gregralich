@@ -31,6 +31,16 @@
     .bike-note { border-top: 1px solid var(--line); padding-top: 16px; }
     .bike-note h3 { font-size: 1.35rem; font-weight: 400; margin: 12px 0; }
     .bike-note p { margin: 0; }
+    /* Individual stories: full-width sections with image placeholders. */
+    .bike-story { max-width: 790px; }
+    .bike-story p { max-width: 720px; font-size: 1.1rem; line-height: 1.65; }
+    .bike-story .bike-meta { font-size: .75rem; opacity: .75; }
+    .bike-story img { display: block; max-width: 100%; height: auto; margin: 30px 0 22px; }
+    .bike-story .bike-placeholder { margin: 30px 0 22px; aspect-ratio: 16 / 9; }
+    .bike-story a { text-underline-offset: 5px; }
+    /* Map embeds need a normal container, not the image placeholder. */
+    .bike-route { width: 100%; height: 360px; border: 1px solid var(--line); overflow: hidden; }
+    .bike-route iframe { display: block; width: 100%; height: 100%; border: 0; }
     .bike-bottom { font: .8rem Arial, sans-serif; border-top: 1px solid var(--line); padding: 28px 0; }
 
     /* WHITE MOUNTAINS REELS: two columns on desktop, one on phones.
@@ -46,6 +56,8 @@
       .bike-hero { padding: 65px 0 70px; }
       .bike-section { padding: 50px 0 55px; }
       .bike-grid, .bike-notes { grid-template-columns: 1fr; }
+      .bike-nav { flex-wrap: wrap; justify-content: flex-start; gap: 12px 20px; }
+      .bike-route { height: 300px; }
     }
   </style>
 </head>
@@ -54,6 +66,7 @@
     <nav class="bike-nav" aria-label="Bicycle page navigation">
       <a href="index.html">← Greg Ralich</a>
       <a href="#rides">Rides</a>
+      <a href="#history">History</a>
       <a href="#workshop">Workshop</a>
       <a href="#notes">Notes</a>
     </nav>
@@ -62,13 +75,9 @@
       <p class="bike-kicker">A rolling archive / MA · NH · Elsewhere</p>
       <h1>Bicycles<br>&amp; other<br>detours.</h1>
       <p class="bike-lead">Rides worth remembering, bicycles worth fixing, and the things you notice when you spend a lot of time on two wheels.</p>
-      <p>
-This page serves as a portfolio of my experience and expertise with regards to bicycles and bicycling.
-</p><p>
-I’m interested in the bikes more than the riders, I love gear and creative products that solve real problems.
-</p><p>
-I record my riding intermittently with Ride With GPS. I prefer it to Strava but I also have a Strava account to keep up with my friends around the world</p>
-    </p>   
+      <p>This page serves as a portfolio of my experience and expertise with bicycles and bicycling.</p>
+      <p>I'm interested in the bikes more than the riders. I love gear and creative products that solve real problems.</p>
+      <p>I record my riding intermittently with Ride with GPS. I prefer it to Strava, but I also have a Strava account to keep up with friends around the world.</p>   
     </header>
 
     <!-- =====================================================
@@ -83,13 +92,13 @@ I record my riding intermittently with Ride With GPS. I prefer it to Strava but 
       <p class="bike-section-intro">A few trips, long days, short detours, and places reached by bicycle.</p>
       <div class="bike-grid">
         <article class="bike-card">
-          <div class="bike-placeholder"><iframe src="https://ridewithgps.com/embeds?type=route&id=57493453&sampleGraph=true" style="width: 1px; min-width: 100%; height: 700px; border: none;" scrolling="no"></iframe><br>White Mountains, NH</div>
+          <div class="bike-route"><iframe title="White Mountains ATB Tour route" loading="lazy" src="https://ridewithgps.com/embeds?type=route&amp;id=57493453&amp;sampleGraph=true"></iframe></div>
           <p class="bike-meta">Ride journal · New Hampshire</p>
           <h3>White Mountains ATB Tour</h3>
           <p>Took my new bike for a walk - 3 days of riding, hiking, and camping in the White Mountain National Forest</p>
         </article>
         <article class="bike-card">
-          <div class="bike-placeholder"><iframe src="https://ridewithgps.com/embeds?type=route&id=47019615&sampleGraph=true" style="width: 1px; min-width: 100%; height: 700px; border: none;" scrolling="no"></iframe></div>
+          <div class="bike-route"><iframe title="Gravy Days route" loading="lazy" src="https://ridewithgps.com/embeds?type=route&amp;id=47019615&amp;sampleGraph=true"></iframe></div>
           <p class="bike-meta">Goals · 2027</p>
           <h3>Gravy Days</h3>
           <p>Gotta get back out to Thomas next year!</p>
@@ -143,6 +152,66 @@ I record my riding intermittently with Ride With GPS. I prefer it to Strava but 
           </div>
         </div>
       </div>
+    </section>
+
+
+    <!-- =====================================================
+      BICYCLE HISTORY — FIVE INDIVIDUAL STORIES
+
+      Each story is its own <section>, so you can expand it later.
+      TO ADD A PHOTO:
+      1. Upload your picture into the GitHub /images folder.
+      2. Replace that story's <div class="bike-placeholder">...</div>
+         with something like:
+         <img src="images/geekhouse.jpg" alt="Geekhouse bicycle workshop" loading="lazy">
+      3. The .bike-story-photo rule below keeps it responsive.
+      You can add more paragraphs, photos, and links inside each section.
+    ====================================================== -->
+    <div id="history"></div>
+
+    <!-- STORY 1: GEEKHOUSE BIKES -->
+    <section class="bike-section bike-story" id="geekhouse">
+      <p class="bike-meta">2009–2011 · Boston · Bicycle fabrication</p>
+      <h2>Geekhouse Bikes.</h2>
+      <p>From 2009 to 2011, I worked in office management and entry-level marketing at Geekhouse Bikes. We sold about 100 bicycles a year, all custom designed and fabricated in Boston—including machining, welding, and in-house powder coating.</p>
+      <p>Geekhouse is no longer in business, but <a href="https://cms.theradavist.com/search/geekhouse" target="_blank" rel="noopener noreferrer">The Radavist's Geekhouse archive</a> documented our glory days best.</p>
+      <!-- Replace this placeholder with an image when ready. -->
+      <div class="bike-placeholder">Photo coming soon · Geekhouse Bikes</div>
+    </section>
+
+    <!-- STORY 2: CROSS-COUNTRY FOR AUTISM -->
+    <section class="bike-section bike-story" id="cross-country">
+      <p class="bike-meta">2010 · Boston to San Francisco · 4,000+ miles</p>
+      <h2>Cross-Country for Autism.</h2>
+      <p>In 2010, I rode more than 4,000 miles with my friend Bianca, from Boston to San Francisco—against the wind. We raised more than $5,000 for the <a href="https://autismsociety.org/" target="_blank" rel="noopener noreferrer">Autism Society of America</a>, inspired by my mom's 30 years of work in pediatric nursing.</p>
+      <p><a href="https://crosscountryforautism.tumblr.com/" target="_blank" rel="noopener noreferrer">Read our cross-country trip journal →</a></p>
+      <div class="bike-placeholder">Photo coming soon · Cross-country ride</div>
+    </section>
+
+    <!-- STORY 3: NAHBS 2018 -->
+    <section class="bike-section bike-story" id="nahbs">
+      <p class="bike-meta">February 2018 · North American Handmade Bicycle Show</p>
+      <h2>NAHBS with Hot Tubes Paint.</h2>
+      <p>In February 2018, I joined Jordan Load in the Hot Tubes Paint booth at NAHBS. I made a few contributions in addition to talking a lot. Jordan and I go way back, and I was honored to help curate the booth.</p>
+      <div class="bike-placeholder">Photo coming soon · Hot Tubes Paint booth</div>
+    </section>
+
+    <!-- STORY 4: THE DRIFTERS -->
+    <section class="bike-section bike-story" id="drifters">
+      <p class="bike-meta">2012–2015 · Cyclocross · 35mm film</p>
+      <h2>The Drifters Cyclocross Team.</h2>
+      <p>From 2012 to 2015, I raced three seasons of super-noob cyclocross and absolutely loved it. My favorite part was documenting it on 35mm film.</p>
+      <p><a href="https://www.instagram.com/thedrifters_/?hl=en" target="_blank" rel="noopener noreferrer">See The Drifters on Instagram →</a></p>
+      <div class="bike-placeholder">Photo coming soon · The Drifters on film</div>
+    </section>
+
+    <!-- STORY 5: BOSTON GLOBE -->
+    <section class="bike-section bike-story" id="winter-cycling">
+      <p class="bike-meta">January 2014 · Boston Globe · Winter riding</p>
+      <h2>Welcoming the winter cycle.</h2>
+      <p>I was featured in the <em>Boston Globe</em> in its piece about winter cycling. The article was published in January 2014.</p>
+      <p><a href="https://www.bostonglobe.com/business/2014/01/24/welcoming-winter-cycle/DCU1tOw63oIF6sKytZPzAI/story.html?event=event12" target="_blank" rel="noopener noreferrer">Read the Boston Globe article →</a></p>
+      <div class="bike-placeholder">Photo coming soon · Winter cycling article</div>
     </section>
 
     <!-- =====================================================
