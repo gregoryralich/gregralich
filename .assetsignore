@@ -1,5 +1,16 @@
 .git
 .git/**
 .github/**
+.gitignore
+.assetsignore
 node_modules/**
 .DS_Store
+**/.DS_Store
+**/._*
+.env
+.env.*
+archive/**
+scripts/**
+README.md
+**/README.md
+requirements-dev.txt

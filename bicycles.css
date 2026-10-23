@@ -1,0 +1,227 @@
+.bike-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 40px 100px;
+}
+.bike-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 30px 0;
+  border-bottom: 1px solid var(--line);
+  font:
+    0.8rem Arial,
+    sans-serif;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+.bike-nav a {
+  text-underline-offset: 5px;
+}
+.bike-hero {
+  padding: 95px 0 100px;
+}
+.bike-kicker,
+.bike-meta {
+  font:
+    0.75rem Arial,
+    sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.bike-hero h1 {
+  font-size: clamp(4rem, 12vw, 9rem);
+  font-weight: 400;
+  letter-spacing: -0.065em;
+  line-height: 0.9;
+  margin: 20px 0 35px;
+  overflow-wrap: anywhere;
+}
+.bike-lead {
+  font-size: clamp(1.3rem, 2.7vw, 2rem);
+  max-width: 680px;
+  line-height: 1.35;
+}
+.bike-section {
+  border-top: 1px solid var(--line);
+  padding: 65px 0 80px;
+}
+.bike-section h2 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  font-weight: 400;
+  margin: 0 0 20px;
+}
+.bike-section-intro {
+  max-width: 640px;
+  margin-bottom: 38px;
+}
+.bike-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 35px 25px;
+}
+.bike-card {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.bike-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  background: var(--dark-green);
+}
+.bike-card h3 {
+  font-size: 1.75rem;
+  line-height: 1.1;
+  font-weight: 400;
+  margin: 14px 0 10px;
+}
+.bike-card p {
+  margin: 0 0 14px;
+}
+.bike-card .bike-meta {
+  margin-top: 16px;
+  opacity: 0.75;
+}
+.bike-card a {
+  margin-top: auto;
+  text-underline-offset: 5px;
+}
+.bike-placeholder {
+  aspect-ratio: 4 / 3;
+  border: 1px dashed var(--line);
+  display: grid;
+  place-items: center;
+  padding: 25px;
+  text-align: center;
+  font:
+    0.75rem Arial,
+    sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.bike-notes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+.bike-note {
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+}
+.bike-note h3 {
+  font-size: 1.35rem;
+  font-weight: 400;
+  margin: 12px 0;
+}
+.bike-note p {
+  margin: 0;
+}
+
+.bike-story {
+  max-width: 790px;
+}
+.bike-story p {
+  max-width: 720px;
+  font-size: 1.1rem;
+  line-height: 1.65;
+}
+.bike-story .bike-meta {
+  font-size: 0.75rem;
+  opacity: 0.75;
+}
+.bike-story img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 30px 0 22px;
+}
+.bike-story .bike-placeholder {
+  margin: 30px 0 22px;
+  aspect-ratio: 16 / 9;
+}
+.bike-story a {
+  text-underline-offset: 5px;
+}
+
+.bike-route {
+  width: 100%;
+  height: 360px;
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+.bike-route iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.bike-bottom {
+  font:
+    0.8rem Arial,
+    sans-serif;
+  border-top: 1px solid var(--line);
+  padding: 28px 0;
+}
+
+.reel-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin: 32px 0 12px;
+  align-items: start;
+}
+.reel-item {
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+}
+.reel-item .instagram-media {
+  width: 100% !important;
+  max-width: 540px !important;
+  min-width: 0 !important;
+  margin: 0 auto !important;
+}
+.white-mountains-story {
+  margin-top: 35px;
+}
+.white-mountains-story h3 {
+  font-size: 1.75rem;
+  font-weight: 400;
+  margin: 0 0 12px;
+}
+@media (max-width: 700px) {
+  .reel-grid {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+}
+@media (max-width: 700px) {
+  .bike-page {
+    padding: 0 22px 65px;
+  }
+  .bike-hero {
+    padding: 65px 0 70px;
+  }
+  .bike-section {
+    padding: 50px 0 55px;
+  }
+  .bike-grid,
+  .bike-notes {
+    grid-template-columns: 1fr;
+  }
+  .bike-nav {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 12px 20px;
+  }
+  .bike-route {
+    height: 300px;
+  }
+}

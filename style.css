@@ -1,29 +1,20 @@
-/* ============================================================
-   GREG RALICH — WEBSITE STYLES
+/* Shared palette, typography, layout, press cards, and responsive rules. */
 
-   EDITING GUIDE
-   1. COLORS & WIDTH: change the variables immediately below.
-   2. HERO: the big name and introductory text.
-   3. SECTIONS: numbered blocks with headings and content.
-   4. PRESS GALLERY: image cards in three columns.
-   5. RESPONSIVE: layout changes for tablets and phones.
-
-   Save this file as style.css beside index.html.
-   ============================================================ */
-
-/* 1. COLORS AND SITE WIDTH ----------------------------------- */
 :root {
-  --green: #486348;             /* Main background */
-  --dark-green: #253426;        /* Footer background */
-  --cream: #f2eddd;             /* Main text */
-  --soft-green: #d9dfcf;        /* Optional accent */
+  --green: #486348;
+  --dark-green: #253426;
+  --cream: #f2eddd;
   --line: rgba(242, 237, 221, 0.35);
-  --max-width: 1100px;         /* Width of centered page content */
-  --side-padding: 40px;        /* Left/right breathing room */
+  --max-width: 1100px;
+  --side-padding: 40px;
 }
 
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -33,41 +24,30 @@ body {
   line-height: 1.5;
 }
 
-a { color: inherit; }
-a:focus-visible { outline: 2px solid var(--cream); outline-offset: 4px; }
+a {
+  color: inherit;
+}
+a:focus-visible {
+  outline: 2px solid var(--cream);
+  outline-offset: 4px;
+}
 
-/* 2. OPTIONAL TOP NAVIGATION --------------------------------- */
-/* These styles are ready if you add a site-header later. */
-.site-header {
-  width: 100%;
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 28px var(--side-padding);
+:is(.bike-nav, .story-nav, .cc-pagination) {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  border-bottom: 1px solid var(--line);
+  flex-wrap: wrap;
+  gap: 24px;
 }
-
-.name {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 700;
-  text-decoration: none;
-  letter-spacing: -0.02em;
-}
-
-nav { display: flex; flex-wrap: wrap; gap: 24px; }
-nav a {
+:is(.bike-nav, .story-nav, .cc-pagination) a {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.82rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   text-decoration: none;
 }
-nav a:hover { text-decoration: underline; }
+:is(.bike-nav, .story-nav, .cc-pagination) a:hover {
+  text-decoration: underline;
+}
 
-/* 3. HERO / BIG NAME ----------------------------------------- */
 .hero {
   width: 100%;
   max-width: var(--max-width);
@@ -80,8 +60,7 @@ nav a:hover { text-decoration: underline; }
 }
 
 .eyebrow,
-.section-number,
-.project-type {
+.section-number {
   font-family: Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -103,28 +82,6 @@ nav a:hover { text-decoration: underline; }
   line-height: 1.3;
 }
 
-.down {
-  margin-top: 60px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.82rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  text-decoration: none;
-}
-
-/* 4. NUMBERED SECTIONS --------------------------------------- */
-/* HTML pattern:
-   <section class="section text-section">
-     <p class="section-number">01</p>
-     <div class="section-content">
-       <h2>Heading</h2>
-       <p>Text...</p>
-     </div>
-   </section>
-
-   The section number sits in a narrow left column.
-   The section-content div occupies the wide right column.
-*/
 .section {
   width: 100%;
   max-width: var(--max-width);
@@ -136,8 +93,12 @@ nav a:hover { text-decoration: underline; }
   border-top: 1px solid var(--line);
 }
 
-.section-number { margin: 8px 0 0; }
-.section-content { min-width: 0; }
+.section-number {
+  margin: 8px 0 0;
+}
+.section-content {
+  min-width: 0;
+}
 
 .section h2 {
   margin: 0 0 30px;
@@ -154,13 +115,6 @@ nav a:hover { text-decoration: underline; }
   line-height: 1.5;
 }
 
-.big-copy {
-  max-width: 850px;
-  font-size: clamp(1.6rem, 3vw, 2.6rem);
-  line-height: 1.25;
-}
-
-/* Photos and videos outside the press gallery */
 .section-content > img,
 .section-content > p > img {
   display: block;
@@ -179,22 +133,18 @@ nav a:hover { text-decoration: underline; }
   margin: 30px 0;
 }
 
-.section-content a { text-underline-offset: 5px; }
+.section-content a {
+  text-underline-offset: 5px;
+}
 
-/* 5. PRESS GALLERY ------------------------------------------- */
-/* All press images are framed to the same 4:3 shape.
-   object-fit: cover crops without stretching.
-   To show more of a particular screenshot, add this to its img:
-   style="object-position: center top;"
-   Or use object-fit: contain to show entire screenshots,
-   with possible empty space around them.
-*/
-.press-intro { max-width: 680px; }
+.press-intro {
+  max-width: 680px;
+}
 
 .press-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 46px 22px;             /* Row gap, then column gap */
+  gap: 46px 22px;
   margin-top: 45px;
 }
 
@@ -207,7 +157,7 @@ nav a:hover { text-decoration: underline; }
 .press-card img {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 3;        /* Try 1 / 1 for squares */
+  aspect-ratio: 4 / 3;
   height: auto;
   object-fit: cover;
   object-position: center;
@@ -215,7 +165,6 @@ nav a:hover { text-decoration: underline; }
   border: 1px solid var(--line);
 }
 
-/* These specific rules override the larger general section text. */
 .press-card .press-source {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.68rem;
@@ -249,95 +198,67 @@ nav a:hover { text-decoration: underline; }
   text-underline-offset: 4px;
 }
 
-/* 6. OPTIONAL PROJECT CARDS ---------------------------------- */
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
-  margin-top: 45px;
-}
-
-.project-card {
-  min-height: 300px;
-  padding: 26px;
-  border: 1px solid var(--line);
-  display: flex;
-  flex-direction: column;
-}
-
-.project-card h3 {
-  margin: auto 0 12px;
-  font-size: 2rem;
-  font-weight: 400;
-}
-.project-card p:last-child { margin-bottom: 0; }
-
-.future-photo {
-  min-height: 420px;
-  margin-top: 80px;
-  border: 1px dashed var(--cream);
-  display: grid;
-  place-items: center;
-  padding: 30px;
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.72rem;
-  letter-spacing: 0.1em;
-  opacity: 0.7;
-}
-
-/* 7. CONTACT AND FOOTER -------------------------------------- */
-.contact-section { padding-bottom: 150px; }
-.contact-link {
-  display: inline-block;
-  margin-top: 30px;
-  font-size: clamp(1.4rem, 3vw, 2.5rem);
-  text-underline-offset: 7px;
-}
-
-footer {
+:is(.site-footer, .bike-bottom, .story-footer, .cc-footer) {
   background: var(--dark-green);
   padding: 32px var(--side-padding);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.78rem;
 }
 
-footer p,
-footer > a {
+:is(.site-footer, .bike-bottom, .story-footer, .cc-footer) p,
+:is(.site-footer, .bike-bottom, .story-footer, .cc-footer) > a {
   display: block;
   max-width: var(--max-width);
   margin: 0 auto 8px;
 }
 
-/* 8. TABLET AND PHONE LAYOUTS -------------------------------- */
-/* On narrower screens: 2 press cards per row. */
 @media (max-width: 1000px) {
-  .press-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .press-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
-/* On smaller screens: section number moves above the content. */
 @media (max-width: 750px) {
-  :root { --side-padding: 24px; }
-  .site-header { align-items: flex-start; }
-  nav { gap: 12px; }
-  .hero { min-height: 75vh; }
-  .hero h1 { font-size: clamp(3.8rem, 15vw, 7rem); }
+  :root {
+    --side-padding: 24px;
+  }
+  :is(.bike-nav, .story-nav, .cc-pagination) {
+    gap: 12px;
+  }
+  .hero {
+    min-height: 75vh;
+  }
+  .hero h1 {
+    font-size: clamp(3.8rem, 15vw, 7rem);
+  }
   .section {
     grid-template-columns: minmax(0, 1fr);
     gap: 14px;
     padding-top: 75px;
     padding-bottom: 75px;
   }
-  .section-number { margin: 0; }
-  .project-grid { grid-template-columns: 1fr; }
-  .project-card { min-height: 230px; }
-  .future-photo { min-height: 300px; }
+  .section-number {
+    margin: 0;
+  }
 }
 
-/* Phones: 1 press card per row. */
 @media (max-width: 600px) {
   .press-grid {
     grid-template-columns: minmax(0, 1fr);
     gap: 38px;
+  }
+}
+
+/* Lists use the same text sizing as the surrounding section copy. */
+.people-list {
+  padding: 0;
+  list-style: none;
+  max-width: 750px;
+  font-size: clamp(1.2rem, 2vw, 1.7rem);
+  line-height: 1.5;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
