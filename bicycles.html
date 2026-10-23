@@ -1,271 +1,340 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Bicycle rides, repairs, old bikes, and field notes from Greg Ralich.">
-  <title>Bicycles — Greg Ralich</title>
-  <!-- Reuse the same stylesheet as your homepage. -->
-  <link rel="stylesheet" href="style.css">
-  <style>
-    /* BICYCLE PAGE ONLY. Move these rules to style.css later if you prefer. */
-    .bike-page { max-width: 1000px; margin: 0 auto; padding: 0 40px 100px; }
-    .bike-nav { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 30px 0; border-bottom: 1px solid var(--line); font: 0.8rem Arial, sans-serif; letter-spacing: .07em; text-transform: uppercase; }
-    .bike-nav a { text-underline-offset: 5px; }
-    .bike-hero { padding: 95px 0 100px; }
-    .bike-kicker, .bike-meta { font: .75rem Arial, sans-serif; letter-spacing: .1em; text-transform: uppercase; }
-    .bike-hero h1 { font-size: clamp(4rem, 12vw, 9rem); font-weight: 400; letter-spacing: -.065em; line-height: .9; margin: 20px 0 35px; overflow-wrap: anywhere; }
-    .bike-lead { font-size: clamp(1.3rem, 2.7vw, 2rem); max-width: 680px; line-height: 1.35; }
-    .bike-section { border-top: 1px solid var(--line); padding: 65px 0 80px; }
-    .bike-section h2 { font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1; letter-spacing: -.04em; font-weight: 400; margin: 0 0 20px; }
-    .bike-section-intro { max-width: 640px; margin-bottom: 38px; }
-    .bike-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 35px 25px; }
-    .bike-card { min-width: 0; display: flex; flex-direction: column; }
-    .bike-card img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border: 1px solid var(--line); background: var(--dark-green); }
-    .bike-card h3 { font-size: 1.75rem; line-height: 1.1; font-weight: 400; margin: 14px 0 10px; }
-    .bike-card p { margin: 0 0 14px; }
-    .bike-card .bike-meta { margin-top: 16px; opacity: .75; }
-    .bike-card a { margin-top: auto; text-underline-offset: 5px; }
-    .bike-placeholder { aspect-ratio: 4 / 3; border: 1px dashed var(--line); display: grid; place-items: center; padding: 25px; text-align: center; font: .75rem Arial, sans-serif; letter-spacing: .08em; text-transform: uppercase; }
-    .bike-notes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
-    .bike-note { border-top: 1px solid var(--line); padding-top: 16px; }
-    .bike-note h3 { font-size: 1.35rem; font-weight: 400; margin: 12px 0; }
-    .bike-note p { margin: 0; }
-    /* Individual stories: full-width sections with image placeholders. */
-    .bike-story { max-width: 790px; }
-    .bike-story p { max-width: 720px; font-size: 1.1rem; line-height: 1.65; }
-    .bike-story .bike-meta { font-size: .75rem; opacity: .75; }
-    .bike-story img { display: block; max-width: 100%; height: auto; margin: 30px 0 22px; }
-    .bike-story .bike-placeholder { margin: 30px 0 22px; aspect-ratio: 16 / 9; }
-    .bike-story a { text-underline-offset: 5px; }
-    /* Map embeds need a normal container, not the image placeholder. */
-    .bike-route { width: 100%; height: 360px; border: 1px solid var(--line); overflow: hidden; }
-    .bike-route iframe { display: block; width: 100%; height: 100%; border: 0; }
-    .bike-bottom { font: .8rem Arial, sans-serif; border-top: 1px solid var(--line); padding: 28px 0; }
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta
+      content="Bicycle rides, repairs, old bikes, and field notes from Greg Ralich."
+      name="description"
+    />
+    <title>Bicycles — Greg Ralich</title>
 
-    /* WHITE MOUNTAINS REELS: two columns on desktop, one on phones.
-       Instagram controls the appearance inside each embedded player. */
-    .reel-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin: 32px 0 12px; align-items: start; }
-    .reel-item { min-width: 0; display: flex; justify-content: center; }
-    .reel-item .instagram-media { width: 100% !important; max-width: 540px !important; min-width: 0 !important; margin: 0 auto !important; }
-    .white-mountains-story { margin-top: 35px; }
-    .white-mountains-story h3 { font-size: 1.75rem; font-weight: 400; margin: 0 0 12px; }
-    @media (max-width: 700px) { .reel-grid { grid-template-columns: 1fr; gap: 26px; } }
-    @media (max-width: 700px) {
-      .bike-page { padding: 0 22px 65px; }
-      .bike-hero { padding: 65px 0 70px; }
-      .bike-section { padding: 50px 0 55px; }
-      .bike-grid, .bike-notes { grid-template-columns: 1fr; }
-      .bike-nav { flex-wrap: wrap; justify-content: flex-start; gap: 12px 20px; }
-      .bike-route { height: 300px; }
-    }
-  </style>
-</head>
-<body>
-  <main class="bike-page">
-    <nav class="bike-nav" aria-label="Bicycle page navigation">
-      <a href="index.html">← Greg Ralich</a>
-      <a href="#rides">Rides</a>
-      <a href="#history">History</a>
-      <a href="#workshop">Workshop</a>
-      <a href="#notes">Notes</a>
-    </nav>
+    <link href="style.css" rel="stylesheet" />
+    <link href="bicycles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main class="bike-page">
+      <nav aria-label="Bicycle page navigation" class="bike-nav">
+        <a href="index.html">← Greg Ralich</a>
+        <a href="#rides">Rides</a>
+        <a href="#history">History</a>
+        <a href="#workshop">Workshop</a>
+        <a href="#notes">Notes</a>
+      </nav>
 
-    <header class="bike-hero">
-      <p class="bike-kicker">A rolling archive / MA · NH · Elsewhere</p>
-      <h1>Bicycles<br>&amp; other<br>detours.</h1>
-      <p class="bike-lead">Rides worth remembering, bicycles worth fixing, and the things you notice when you spend a lot of time on two wheels.</p>
-      <p>This page serves as a portfolio of my experience and expertise with bicycles and bicycling.</p>
-      <p>I'm interested in the bikes more than the riders. I love gear and creative products that solve real problems.</p>
-      <p>I record my riding intermittently with Ride with GPS. I prefer it to Strava, but I also have a Strava account to keep up with friends around the world.</p>   
-    </header>
+      <header class="bike-hero">
+        <p class="bike-kicker">A rolling archive / MA · NH · Elsewhere</p>
+        <h1>Bicycles<br />&amp; other<br />detours.</h1>
+        <p class="bike-lead">
+          Rides worth remembering, bicycles worth fixing, and the things you
+          notice when you spend a lot of time on two wheels.
+        </p>
+        <p>
+          This page serves as a portfolio of my experience and expertise with
+          bicycles and bicycling.
+        </p>
+        <p>
+          I'm interested in the bikes more than the riders. I love gear and
+          creative products that solve real problems.
+        </p>
+        <p>
+          I record my riding intermittently with Ride with GPS. I prefer it to
+          Strava, but I also have a Strava account to keep up with friends
+          around the world.
+        </p>
+      </header>
 
-    <!-- =====================================================
-      RIDES: To add a ride, COPY an entire <article>...</article>
-      block below and paste it inside the bike-grid.
-      Change the title, date, text, image path, and link.
-      Image files should be uploaded to GitHub's /images folder.
-      For example: images/white-mountains-ride.jpg
-    ====================================================== -->
-    <section class="bike-section" id="rides">
-      <h2>Out riding.</h2>
-      <p class="bike-section-intro">A few trips, long days, short detours, and places reached by bicycle.</p>
-      <div class="bike-grid">
-        <article class="bike-card">
-          <div class="bike-route"><iframe title="White Mountains ATB Tour route" loading="lazy" src="https://ridewithgps.com/embeds?type=route&amp;id=57493453&amp;sampleGraph=true"></iframe></div>
-          <p class="bike-meta">Ride journal · New Hampshire</p>
-          <h3>White Mountains ATB Tour</h3>
-          <p>Took my new bike for a walk - 3 days of riding, hiking, and camping in the White Mountain National Forest</p>
-        </article>
-        <article class="bike-card">
-          <div class="bike-route"><iframe title="Gravy Days route" loading="lazy" src="https://ridewithgps.com/embeds?type=route&amp;id=47019615&amp;sampleGraph=true"></iframe></div>
-          <p class="bike-meta">Goals · 2027</p>
-          <h3>Gravy Days</h3>
-          <p>Gotta get back out to Thomas next year!</p>
-        </article>
-      </div>
+      <section class="bike-section" id="rides">
+        <h2>Out riding.</h2>
+        <p class="bike-section-intro">
+          A few trips, long days, short detours, and places reached by bicycle.
+        </p>
+        <div class="bike-grid">
+          <article class="bike-card">
+            <div class="bike-route">
+              <iframe
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                src="https://ridewithgps.com/embeds?type=route&amp;id=57493453&amp;sampleGraph=true"
+                title="White Mountains ATB Tour route"
+              ></iframe>
+            </div>
+            <p class="bike-meta">Ride journal · New Hampshire</p>
+            <h3>White Mountains ATB Tour</h3>
+            <p>
+              Took my new bike for a walk - 3 days of riding, hiking, and
+              camping in the White Mountain National Forest
+            </p>
+          </article>
+          <article class="bike-card">
+            <div class="bike-route">
+              <iframe
+                loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
+                src="https://ridewithgps.com/embeds?type=route&amp;id=47019615&amp;sampleGraph=true"
+                title="Gravy Days route"
+              ></iframe>
+            </div>
+            <p class="bike-meta">Goals · 2027</p>
+            <h3>Gravy Days</h3>
+            <p>Gotta get back out to Thomas next year!</p>
+          </article>
+        </div>
 
-      <!-- =====================================================
-        WHITE MOUNTAINS INSTAGRAM REELS
-        To change a reel, replace its URL in BOTH places:
-        data-instgrm-permalink and the <a href> fallback link.
-        To add a fifth reel, copy one entire reel-item div.
-        The Instagram script is loaded ONCE at the end of the page.
-        Instagram may not load in browsers blocking third-party content;
-        the direct link remains available in that case.
-      ====================================================== -->
-      <div class="white-mountains-story">
-        <h3>White Mountains on the CampSnap8</h3>
-        <p>Four reels from the ride shot on the <a href="https://www.campsnapphoto.com/products/cs8?srsltid=AYCX9vJXLc-_yLOw2l8bwisCkNoMem4YnKAniAxzQhwygPl4VVYrOkKb">CS8</a>. Watch them here or open them directly on Instagram.</p>
-        <div class="reel-grid">
-          <!-- REEL 1 -->
-          <div class="reel-item">
-            <blockquote class="instagram-media"
-              data-instgrm-permalink="https://www.instagram.com/reel/Det9s_bxqZ_/"
-              data-instgrm-version="14">
-              <a href="https://www.instagram.com/reel/Det9s_bxqZ_/" target="_blank" rel="noopener noreferrer">Watch White Mountains reel 1 on Instagram</a>
-            </blockquote>
-          </div>
-          <!-- REEL 2 -->
-          <div class="reel-item">
-            <blockquote class="instagram-media"
-              data-instgrm-permalink="https://www.instagram.com/reel/DepbTJxhdH3/"
-              data-instgrm-version="14">
-              <a href="https://www.instagram.com/reel/DepbTJxhdH3/" target="_blank" rel="noopener noreferrer">Watch White Mountains reel 2 on Instagram</a>
-            </blockquote>
-          </div>
-          <!-- REEL 3 -->
-          <div class="reel-item">
-            <blockquote class="instagram-media"
-              data-instgrm-permalink="https://www.instagram.com/reel/DekpQS8h3HY/"
-              data-instgrm-version="14">
-              <a href="https://www.instagram.com/reel/DekpQS8h3HY/" target="_blank" rel="noopener noreferrer">Watch White Mountains reel 3 on Instagram</a>
-            </blockquote>
-          </div>
-          <!-- REEL 4 -->
-          <div class="reel-item">
-            <blockquote class="instagram-media"
-              data-instgrm-permalink="https://www.instagram.com/reel/Dejiq-XBm7T/"
-              data-instgrm-version="14">
-              <a href="https://www.instagram.com/reel/Dejiq-XBm7T/" target="_blank" rel="noopener noreferrer">Watch White Mountains reel 4 on Instagram</a>
-            </blockquote>
+        <div class="white-mountains-story">
+          <h3>White Mountains on the CampSnap8</h3>
+          <p>
+            Four reels from the ride shot on the
+            <a
+              href="https://www.campsnapphoto.com/products/cs8?srsltid=AYCX9vJXLc-_yLOw2l8bwisCkNoMem4YnKAniAxzQhwygPl4VVYrOkKb"
+              >CS8</a
+            >. Watch them here or open them directly on Instagram.
+          </p>
+          <div class="reel-grid">
+            <div class="reel-item">
+              <blockquote
+                class="instagram-media"
+                data-instgrm-permalink="https://www.instagram.com/reel/Det9s_bxqZ_/"
+                data-instgrm-version="14"
+              >
+                <a
+                  href="https://www.instagram.com/reel/Det9s_bxqZ_/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  >Watch White Mountains reel 1 on Instagram</a
+                >
+              </blockquote>
+            </div>
+
+            <div class="reel-item">
+              <blockquote
+                class="instagram-media"
+                data-instgrm-permalink="https://www.instagram.com/reel/DepbTJxhdH3/"
+                data-instgrm-version="14"
+              >
+                <a
+                  href="https://www.instagram.com/reel/DepbTJxhdH3/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  >Watch White Mountains reel 2 on Instagram</a
+                >
+              </blockquote>
+            </div>
+
+            <div class="reel-item">
+              <blockquote
+                class="instagram-media"
+                data-instgrm-permalink="https://www.instagram.com/reel/DekpQS8h3HY/"
+                data-instgrm-version="14"
+              >
+                <a
+                  href="https://www.instagram.com/reel/DekpQS8h3HY/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  >Watch White Mountains reel 3 on Instagram</a
+                >
+              </blockquote>
+            </div>
+
+            <div class="reel-item">
+              <blockquote
+                class="instagram-media"
+                data-instgrm-permalink="https://www.instagram.com/reel/Dejiq-XBm7T/"
+                data-instgrm-version="14"
+              >
+                <a
+                  href="https://www.instagram.com/reel/Dejiq-XBm7T/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  >Watch White Mountains reel 4 on Instagram</a
+                >
+              </blockquote>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
+      <div id="history"></div>
 
-    <!-- =====================================================
-      BICYCLE HISTORY — FIVE INDIVIDUAL STORIES
+      <section class="bike-section bike-story" id="geekhouse">
+        <p class="bike-meta">2009–2011 · Boston · Bicycle fabrication</p>
+        <h2>Geekhouse Bikes.</h2>
+        <p>
+          From 2009 to 2011, I worked in an office management and entry-level
+          marketing role at Geekhouse Bikes. We sold about 100 bicycles a year,
+          all custom designed and fabricated in Boston—including machining,
+          welding, and in-house powder coating. I really enjoyed doing the
+          newsletters, Flickr, early-Instagram and working on the CX Team and
+          going to NAHBS.<br />Dan St. Germain was doing very creative things
+          online then and it was cool to watch over his shoulder. I also got to
+          meet Aaron Panone and the Fringe community through my time at
+          Geekhouse.
+        </p>
+        <p>
+          Geekhouse is no longer around as a business, but
+          <a
+            href="https://cms.theradavist.com/search/geekhouse"
+            rel="noopener noreferrer"
+            target="_blank"
+            >The Radavist's Geekhouse archive</a
+          >
+          documented our glory days best.
+        </p>
+        <img
+          alt="Marty Greg and Brad at Geekhouse in 2010"
+          src="images/geekhouse.png"
+        />
+      </section>
 
-      Each story is its own <section>, so you can expand it later.
-      TO ADD A PHOTO:
-      1. Upload your picture into the GitHub /images folder.
-      2. Replace that story's <div class="bike-placeholder">...</div>
-         with something like:
-         <img src="images/geekhouse.jpg" alt="Geekhouse bicycle workshop" loading="lazy">
-      3. The .bike-story-photo rule below keeps it responsive.
-      You can add more paragraphs, photos, and links inside each section.
-    ====================================================== -->
-    <div id="history"></div>
+      <section class="bike-section bike-story" id="cross-country">
+        <p class="bike-meta">2010 · Boston to San Francisco · 4,000+ miles</p>
+        <h2>Cross-Country for Autism.</h2>
+        <p>
+          In 2010, I rode more than 4,000 miles with my friend Bianca, from
+          Boston to San Francisco—against the wind. We raised more than $5,000
+          for the
+          <a
+            href="https://autismsociety.org/"
+            rel="noopener noreferrer"
+            target="_blank"
+            >Autism Society of America</a
+          >, inspired by my mom's 30 years of work in pediatric nursing.
+        </p>
+        <p>
+          <a
+            href="https://crosscountryforautism.tumblr.com/"
+            rel="noopener noreferrer"
+            target="_blank"
+            >Read our cross-country trip journal →</a
+          >
+        </p>
+        <img
+          alt="Greg's Geekhouse against a mural in San Fancisco that says Keep the Faith"
+          src="images/ccfa-geekhouse-keep-the-faith.png"
+        />
+      </section>
 
-    <!-- STORY 1: GEEKHOUSE BIKES -->
-    <section class="bike-section bike-story" id="geekhouse">
-      <p class="bike-meta">2009–2011 · Boston · Bicycle fabrication</p>
-      <h2>Geekhouse Bikes.</h2>
-      <p>From 2009 to 2011, I worked in an office management and entry-level marketing role at Geekhouse Bikes. We sold about 100 bicycles a year, all custom designed and fabricated in Boston—including machining, welding, and in-house powder coating. I really enjoyed doing the newsletters, Flickr, early-Instagram and working on the CX Team and going to NAHBS.<br>Dan St. Germain was doing very creative things online then and it was cool to watch over his shoulder. I also got to meet Aaron Panone and the Fringe community through my time at Geekhouse.</p>
-      <p>Geekhouse is no longer around as a business, but <a href="https://cms.theradavist.com/search/geekhouse" target="_blank" rel="noopener noreferrer">The Radavist's Geekhouse archive</a> documented our glory days best.</p>
-      <img src="images/geekhouse.png alt="Marty Greg and Brad at Geekhouse in 2010">
-    </section>
+      <section class="bike-section bike-story" id="nahbs">
+        <p class="bike-meta">
+          February 2018 · North American Handmade Bicycle Show
+        </p>
+        <h2>NAHBS with Hot Tubes Paint.</h2>
+        <p>
+          In February 2018, I joined Jordan Load in the Hot Tubes Paint booth at
+          NAHBS. I made a few contributions in addition to talking a lot. Jordan
+          and I go way back, and I was honored to help curate the booth.
+        </p>
+        <div class="bike-placeholder">
+          Photo coming soon · Hot Tubes Paint booth
+        </div>
+      </section>
 
-    <!-- STORY 2: CROSS-COUNTRY FOR AUTISM -->
-    <section class="bike-section bike-story" id="cross-country">
-      <p class="bike-meta">2010 · Boston to San Francisco · 4,000+ miles</p>
-      <h2>Cross-Country for Autism.</h2>
-      <p>In 2010, I rode more than 4,000 miles with my friend Bianca, from Boston to San Francisco—against the wind. We raised more than $5,000 for the <a href="https://autismsociety.org/" target="_blank" rel="noopener noreferrer">Autism Society of America</a>, inspired by my mom's 30 years of work in pediatric nursing.</p>
-      <p><a href="https://crosscountryforautism.tumblr.com/" target="_blank" rel="noopener noreferrer">Read our cross-country trip journal →</a></p>
-<img src="images/ccfa-geekhouse-keep-the-fait/png" alt="Greg's Geekhouse against a mural in San Fancisco that says Keep the Faith">    </section>
+      <section class="bike-section bike-story" id="drifters">
+        <p class="bike-meta">2012–2015 · Cyclocross · 35mm film</p>
+        <h2>The Drifters Cyclocross Team.</h2>
+        <p>
+          From 2012 to 2015, I raced three seasons of super-noob cyclocross and
+          absolutely loved it. My favorite part was documenting it on 35mm film.
+        </p>
+        <p>
+          <a
+            href="https://www.instagram.com/thedrifters_/?hl=en"
+            rel="noopener noreferrer"
+            target="_blank"
+            >See The Drifters on Instagram →</a
+          >
+        </p>
+        <div class="bike-placeholder">
+          Photo coming soon · The Drifters on film
+        </div>
+      </section>
 
-    <!-- STORY 3: NAHBS 2018 -->
-    <section class="bike-section bike-story" id="nahbs">
-      <p class="bike-meta">February 2018 · North American Handmade Bicycle Show</p>
-      <h2>NAHBS with Hot Tubes Paint.</h2>
-      <p>In February 2018, I joined Jordan Load in the Hot Tubes Paint booth at NAHBS. I made a few contributions in addition to talking a lot. Jordan and I go way back, and I was honored to help curate the booth.</p>
-      <div class="bike-placeholder">Photo coming soon · Hot Tubes Paint booth</div>
-    </section>
+      <section class="bike-section bike-story" id="winter-cycling">
+        <p class="bike-meta">January 2014 · Boston Globe · Winter riding</p>
+        <h2>Welcoming the winter cycle.</h2>
+        <p>
+          I was featured in the <em>Boston Globe</em> in its piece about winter
+          cycling. The article was published in January 2014.
+        </p>
+        <p>
+          <a
+            href="https://www.bostonglobe.com/business/2014/01/24/welcoming-winter-cycle/DCU1tOw63oIF6sKytZPzAI/story.html?event=event12"
+            rel="noopener noreferrer"
+            target="_blank"
+            >Read the Boston Globe article →</a
+          >
+        </p>
+        <div class="bike-placeholder">
+          Photo coming soon · Winter cycling article
+        </div>
+      </section>
 
-    <!-- STORY 4: THE DRIFTERS -->
-    <section class="bike-section bike-story" id="drifters">
-      <p class="bike-meta">2012–2015 · Cyclocross · 35mm film</p>
-      <h2>The Drifters Cyclocross Team.</h2>
-      <p>From 2012 to 2015, I raced three seasons of super-noob cyclocross and absolutely loved it. My favorite part was documenting it on 35mm film.</p>
-      <p><a href="https://www.instagram.com/thedrifters_/?hl=en" target="_blank" rel="noopener noreferrer">See The Drifters on Instagram →</a></p>
-      <div class="bike-placeholder">Photo coming soon · The Drifters on film</div>
-    </section>
+      <section class="bike-section" id="workshop">
+        <h2>In the workshop.</h2>
+        <p class="bike-section-intro">
+          Old frames, good parts, mysterious noises, and the satisfaction of
+          making something work again.
+        </p>
+        <div class="bike-grid">
+          <article class="bike-card">
+            <div class="bike-placeholder">Add a photo of the Colnago</div>
+            <p class="bike-meta">Bicycle archive · Vintage steel</p>
+            <h3>1984 Colnago Super</h3>
+            <p>
+              A place for the bicycle's history, components, repairs, and the
+              details that make it special.
+            </p>
+          </article>
+          <article class="bike-card">
+            <div class="bike-placeholder">Add a photo of the Fat Chance</div>
+            <p class="bike-meta">Bicycle archive · Mountain bike</p>
+            <h3>Wicked Fat Chance</h3>
+            <p>
+              Photographs, identifying details, and notes from keeping an
+              interesting old mountain bike rolling.
+            </p>
+          </article>
+        </div>
+      </section>
 
-    <!-- STORY 5: BOSTON GLOBE -->
-    <section class="bike-section bike-story" id="winter-cycling">
-      <p class="bike-meta">January 2014 · Boston Globe · Winter riding</p>
-      <h2>Welcoming the winter cycle.</h2>
-      <p>I was featured in the <em>Boston Globe</em> in its piece about winter cycling. The article was published in January 2014.</p>
-      <p><a href="https://www.bostonglobe.com/business/2014/01/24/welcoming-winter-cycle/DCU1tOw63oIF6sKytZPzAI/story.html?event=event12" target="_blank" rel="noopener noreferrer">Read the Boston Globe article →</a></p>
-      <div class="bike-placeholder">Photo coming soon · Winter cycling article</div>
-    </section>
+      <section class="bike-section" id="notes">
+        <h2>Loose spokes.</h2>
+        <p class="bike-section-intro">
+          Small notes that don't need a whole story.
+        </p>
+        <div class="bike-notes">
+          <article class="bike-note">
+            <p class="bike-meta">Workshop note</p>
+            <h3>A stubborn drivetrain</h3>
+            <p>
+              A spot for lessons learned from tuning, adjusting, and chasing
+              down odd noises.
+            </p>
+          </article>
+          <article class="bike-note">
+            <p class="bike-meta">Good finds</p>
+            <h3>Interesting old bicycles</h3>
+            <p>
+              A running record of unusual bikes found at auctions, estate sales,
+              and elsewhere.
+            </p>
+          </article>
+          <article class="bike-note">
+            <p class="bike-meta">Field note</p>
+            <h3>What caught my eye</h3>
+            <p>
+              Roadside details, routes worth sharing, and ideas for the next
+              ride.
+            </p>
+          </article>
+        </div>
+      </section>
+      <footer class="bike-bottom">
+        <a href="index.html">← Back to the homepage</a> · Made by hand, more or
+        less.
+      </footer>
+    </main>
 
-    <!-- =====================================================
-      WORKSHOP: These cards work exactly like ride cards.
-      Add a photo with:
-      <img src="images/your-bike-photo.jpg" alt="Describe the bike" loading="lazy">
-      Keep the image inside its <article> block.
-    ====================================================== -->
-    <section class="bike-section" id="workshop">
-      <h2>In the workshop.</h2>
-      <p class="bike-section-intro">Old frames, good parts, mysterious noises, and the satisfaction of making something work again.</p>
-      <div class="bike-grid">
-        <article class="bike-card">
-          <div class="bike-placeholder">Add a photo of the Colnago</div>
-          <p class="bike-meta">Bicycle archive · Vintage steel</p>
-          <h3>1984 Colnago Super</h3>
-          <p>A place for the bicycle's history, components, repairs, and the details that make it special.</p>
-        </article>
-        <article class="bike-card">
-          <div class="bike-placeholder">Add a photo of the Fat Chance</div>
-          <p class="bike-meta">Bicycle archive · Mountain bike</p>
-          <h3>Wicked Fat Chance</h3>
-          <p>Photographs, identifying details, and notes from keeping an interesting old mountain bike rolling.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- =====================================================
-      QUICK NOTES: For small observations, you don't need a photo.
-      Copy one <article class="bike-note"> block to add another.
-      This is a good place for fixes, finds, parts, and ideas.
-    ====================================================== -->
-    <section class="bike-section" id="notes">
-      <h2>Loose spokes.</h2>
-      <p class="bike-section-intro">Small notes that don't need a whole story.</p>
-      <div class="bike-notes">
-        <article class="bike-note">
-          <p class="bike-meta">Workshop note</p>
-          <h3>A stubborn drivetrain</h3>
-          <p>A spot for lessons learned from tuning, adjusting, and chasing down odd noises.</p>
-        </article>
-        <article class="bike-note">
-          <p class="bike-meta">Good finds</p>
-          <h3>Interesting old bicycles</h3>
-          <p>A running record of unusual bikes found at auctions, estate sales, and elsewhere.</p>
-        </article>
-        <article class="bike-note">
-          <p class="bike-meta">Field note</p>
-          <h3>What caught my eye</h3>
-          <p>Roadside details, routes worth sharing, and ideas for the next ride.</p>
-        </article>
-      </div>
-    </section>
-    <footer class="bike-bottom"><a href="index.html">← Back to the homepage</a> · Made by hand, more or less.</footer>
-  </main>
-  <!-- Instagram transforms the four blockquotes into playable reels. -->
-  <script async src="https://www.instagram.com/embed.js"></script>
-</body>
+    <script async="" src="https://www.instagram.com/embed.js"></script>
+  </body>
 </html>

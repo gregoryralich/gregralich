@@ -1,3 +1,121 @@
+/* Cross-Country archive only: prefixed classes avoid affecting other pages. */
+.cc-page {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 48px 22px 100px;
+  line-height: 1.6;
+}
+.cc-header {
+  padding: 50px 0 58px;
+  border-bottom: 2px solid currentColor;
+}
+.cc-eyebrow,
+.cc-post-meta {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.cc-header h1 {
+  font-size: clamp(40px, 7vw, 86px);
+  letter-spacing: -0.055em;
+  line-height: 1.02;
+  margin: 16px 0 22px;
+}
+.cc-header p {
+  max-width: 590px;
+  font-size: 19px;
+}
+.cc-jump {
+  margin: 24px 0 0;
+  font-size: 14px;
+}
+.cc-jump a {
+  margin-right: 18px;
+}
+.cc-post {
+  padding: 56px 0 65px;
+  border-bottom: 1px solid #bcb8af;
+  overflow-wrap: anywhere;
+}
+.cc-post-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  color: #68645d;
+}
+.cc-post-content {
+  font-size: 17px;
+  max-width: 780px;
+}
+.cc-post-content p {
+  margin: 0 0 1.1em;
+}
+.cc-post-content img,
+.cc-post-content video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+}
+.cc-post-content iframe {
+  max-width: 100%;
+}
+.cc-post-content blockquote {
+  border-left: 3px solid #aaa;
+  padding-left: 20px;
+  margin-left: 0;
+}
+.cc-post-content .caption {
+  font-size: 15px;
+  line-height: 1.6;
+}
+.cc-post-content h1,
+.cc-post-content h2 {
+  line-height: 1.2;
+}
+.cc-post-content a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.cc-footer {
+  padding: 45px 0;
+  font-size: 13px;
+}
+@media (max-width: 600px) {
+  .cc-page {
+    padding: 24px 18px 70px;
+  }
+  .cc-post {
+    padding: 35px 0 45px;
+  }
+  .cc-post-content {
+    font-size: 16px;
+  }
+}
+
+.cc-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin: 24px 0;
+}
+.cc-pagination a,
+.cc-pagination span {
+  display: inline-block;
+  padding: 7px 12px;
+  border: 1px solid currentColor;
+  text-decoration: none;
+  font-size: 14px;
+}
+.cc-pagination [aria-current="page"] {
+  background: currentColor;
+  color: var(--cc-current-color, #fff);
+  font-weight: bold;
+}
+
 /* Cross-Country archive palette — edit these colors to restyle all five pages. */
 :root {
   --cc-purple: #332455;
@@ -7,28 +125,68 @@
   --cc-paper: #f8f2df;
 }
 
-body { background: var(--cc-purple); color: var(--cc-paper); }
-.cc-header { border-bottom-color: var(--cc-green); }
-.cc-header h1 { color: var(--cc-yellow); }
-.cc-eyebrow { color: var(--cc-green); font-weight: 700; }
-.cc-header p { color: var(--cc-paper); }
-.cc-post { border-bottom-color: var(--cc-green); }
-.cc-post-meta { color: var(--cc-yellow); font-weight: 700; font-size: 14px; letter-spacing: .045em; }
-.cc-post-meta a { color: var(--cc-green); text-decoration: underline; text-underline-offset: 4px; }
-.cc-post-meta a:hover, .cc-post-content a:hover { color: var(--cc-yellow); }
-.cc-post-content a, .cc-jump a, .cc-footer a { color: var(--cc-green); }
-.cc-post-content blockquote { border-left-color: var(--cc-green); }
-.cc-pagination { gap: 9px; }
-.cc-pagination a, .cc-pagination span {
+body {
+  background: var(--cc-purple);
+  color: var(--cc-paper);
+}
+.cc-header {
+  border-bottom-color: var(--cc-green);
+}
+.cc-header h1 {
+  color: var(--cc-yellow);
+}
+.cc-eyebrow {
+  color: var(--cc-green);
+  font-weight: 700;
+}
+.cc-header p {
+  color: var(--cc-paper);
+}
+.cc-post {
+  border-bottom-color: var(--cc-green);
+}
+.cc-post-meta {
+  color: var(--cc-yellow);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.045em;
+}
+.cc-post-meta a {
+  color: var(--cc-green);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.cc-post-meta a:hover,
+.cc-post-content a:hover {
+  color: var(--cc-yellow);
+}
+.cc-post-content a,
+.cc-jump a,
+.cc-footer a {
+  color: var(--cc-green);
+}
+.cc-post-content blockquote {
+  border-left-color: var(--cc-green);
+}
+.cc-pagination {
+  gap: 9px;
+}
+.cc-pagination a,
+.cc-pagination span {
   color: var(--cc-yellow);
   border-color: var(--cc-green);
   background: var(--cc-purple-light);
   padding: 9px 13px;
 }
-.cc-pagination a:hover { background: var(--cc-green); color: var(--cc-purple); }
+.cc-pagination a:hover {
+  background: var(--cc-green);
+  color: var(--cc-purple);
+}
 .cc-pagination [aria-current="page"] {
   background: var(--cc-yellow);
   border-color: var(--cc-yellow);
   color: var(--cc-purple);
 }
-a:focus-visible { outline-color: var(--cc-yellow); }
+a:focus-visible {
+  outline-color: var(--cc-yellow);
+}
