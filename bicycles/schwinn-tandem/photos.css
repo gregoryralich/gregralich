@@ -1,9 +1,4 @@
-/* Keep smaller original photographs at their natural size instead of stretching them. */
-.bike-detail figure img {
-  width: auto;
-  max-width: 100%;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
-}
+/* Large photographs fill the page; the vintage catalog stays at its original width. */
+.bike-detail #photos figure img { width: 100%; max-width: 100%; height: auto; }
+.bike-detail #build figure img { width: auto; max-width: 100%; height: auto; margin-left: auto; margin-right: auto; }
 .bike-detail figcaption { text-align: center; }
