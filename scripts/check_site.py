@@ -8,7 +8,7 @@ from urllib.parse import unquote, urlsplit
 import html5lib
 
 ROOT = Path(__file__).resolve().parents[1]
-pages = sorted(ROOT.glob('*.html'))
+pages = sorted(ROOT.rglob('*.html'))
 errors = []
 documents = {}
 

@@ -1,0 +1,20 @@
+/* Layout for individual bicycle pages; colors and typography come from the shared styles. */
+.bike-detail .bike-hero h1 {
+  font-size: clamp(3.4rem, 10vw, 7.5rem);
+  line-height: 1;
+  overflow-wrap: normal;
+}
+.bike-detail figure { margin: 30px 0; }
+.bike-detail figure img { width: 100%; height: auto; }
+.bike-detail figcaption {
+  font: 0.85rem/1.5 Arial, Helvetica, sans-serif;
+  opacity: 0.8;
+}
+.bike-collection-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 32px;
+  list-style: none;
+  padding: 0;
+  font-size: 1.3rem;
+}

@@ -6,6 +6,8 @@ A static personal website. HTML and CSS are served directly; there is no build s
 
 - `index.html`: homepage content.
 - `bicycles.html` and `bicycles.css`: bicycle portfolio and page-specific layout.
+- `bicycles/<bike-name>/index.html`: individual bicycle pages, served at `/bicycles/<bike-name>/`. Each page has commented sections for its story, build, and photos.
+- `bicycles/bike-detail.css`: shared layout for individual bicycle pages.
 - `jims-photos.html`, `amesbury-postcards.html`, and `welcome-to-looserville.html`: photo stories, sharing `story.css`.
 - `cross-country.html` through `cross-country-5.html`: original trip journal, sharing `cross-country.css`.
 - `style.css`: shared colors, typography, layout, navigation, footers, and press cards. Change the variables at the top for site-wide colors and widths.
