@@ -1,0 +1,8 @@
+/* Preserve each photo’s full framing and avoid enlarging smaller images. */
+.bike-detail #photos figure img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
