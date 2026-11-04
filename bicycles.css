@@ -225,3 +225,31 @@
     height: 300px;
   }
 }
+
+/* BIKE PREVIEWS
+   Change a card's PRIMARY IMAGE src in bicycles.html to choose its photo.
+   Adjust the matching --photo-position below to center the bike or frame.
+   First percentage: left (0%) to right (100%). Second: top (0%) to bottom (100%).
+   Photos keep their proportions and fill the 4:3 preview; originals stay unchanged. */
+#bikes .bike-preview {
+  display: block;
+  margin-top: 0;
+  overflow: hidden;
+}
+#bikes .bike-preview img {
+  height: auto;
+  object-fit: cover;
+  object-position: var(--photo-position, 50% 50%);
+}
+#bikes .bike-preview:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 4px;
+}
+#bikes [data-bike="colnago-super"] { --photo-position: 50% 58%; }
+#bikes [data-bike="firefly-atb"] { --photo-position: 50% 85%; }
+#bikes [data-bike="geekhouse-woodville"] { --photo-position: 50% 60%; }
+#bikes [data-bike="seven-tsunami"] { --photo-position: 50% 70%; }
+#bikes [data-bike="surly-pugsley"] { --photo-position: 50% 75%; }
+#bikes [data-bike="niner-rlt"] { --photo-position: 50% 50%; }
+#bikes [data-bike="fat-chance-kicker"] { --photo-position: 50% 60%; }
+#bikes [data-bike="schwinn-tandem"] { --photo-position: 50% 50%; }
