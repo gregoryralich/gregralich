@@ -1,0 +1,20 @@
+/* Instagram post and single-photo pairing on the Niner page. */
+.niner-instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  align-items: start;
+}
+.bike-detail .niner-instagram-grid figure { margin: 20px 0 30px; min-width: 0; }
+.niner-instagram-embed {
+  display: block;
+  width: 100%;
+  height: 600px;
+  border: 0;
+  background: white;
+}
+.niner-instagram-grid img { display: block; }
+.niner-instagram-grid figcaption { margin-top: 10px; }
+@media (max-width: 760px) {
+  .niner-instagram-grid { grid-template-columns: minmax(0, 1fr); }
+}
