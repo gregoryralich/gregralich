@@ -11,3 +11,15 @@
   line-height: 1;
   overflow-wrap: anywhere;
 }
+
+/* LinkedIn posts need a taller frame than widescreen video embeds. */
+.sustainability-page .section-content .linkedin-embed {
+  height: 720px;
+  aspect-ratio: auto;
+  background: #fff;
+}
+@media (max-width: 600px) {
+  .sustainability-page .section-content .linkedin-embed {
+    height: 760px;
+  }
+}
