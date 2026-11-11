@@ -69,3 +69,7 @@
 @media (max-width: 600px) {
   .woodville-embrocation-photos { grid-template-columns: 1fr; }
 }
+
+/* Vimeo follows the trip photographs and scales with the page. */
+.woodville-trip-video iframe { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; border: 0; }
+.woodville-trip-video figcaption { margin-top: 10px; }
