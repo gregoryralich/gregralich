@@ -1,0 +1,43 @@
+.woodville-page .bike-nav { flex-wrap: wrap; }
+.woodville-page .bike-hero { padding-bottom: 40px; }
+.woodville-page .woodville-primary { margin-top: 40px; }
+.woodville-page .woodville-primary img { display: block; }
+.woodville-chapter > p { max-width: 720px; line-height: 1.65; }
+.woodville-production, .woodville-trip-grid, .woodville-tim-grid, .woodville-green-grid { display: grid; gap: 28px 24px; align-items: start; }
+.woodville-production { grid-template-columns: repeat(3, minmax(0, 1fr)); padding: 24px 10px 10px; }
+.woodville-page .woodville-production figure { margin: 0; padding: 12px 12px 22px; background: #fffdf5; color: #253426; box-shadow: 0 3px 9px #25342626; transform: rotate(-2deg); }
+.woodville-production figure:nth-child(even) { transform: rotate(2deg); }
+.woodville-page .woodville-production img { display: block; aspect-ratio: 1; object-fit: contain; background: #eeeade; }
+.woodville-production figcaption { padding-top: 12px; }
+.woodville-tim-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.woodville-trip-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.woodville-green-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.woodville-green-grid figure:first-child { grid-column: 1 / -1; }
+.woodville-page :is(.woodville-trip-grid,.woodville-tim-grid,.woodville-green-grid) figure { margin: 0; }
+.woodville-page :is(.woodville-trip-grid,.woodville-tim-grid,.woodville-green-grid) img { display: block; margin: 0 0 12px; }
+.woodville-tim-grid a { display: block; cursor: zoom-in; }
+.woodville-gallery-hint { font: .85rem/1.5 Arial, sans-serif; }
+.woodville-lightbox { width: min(850px, calc(100% - 32px)); max-height: 94dvh; box-sizing: border-box; border: 1px solid #486348; padding: 22px; background: #f2eddd; color: #253426; }
+.woodville-lightbox::backdrop { background: #101a12e6; }
+.woodville-lightbox-top, .woodville-gallery-controls { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.woodville-lightbox h2 { margin: 0; font: 1rem/1.4 Arial, sans-serif; }
+.woodville-lightbox button { border: 1px solid #486348; background: transparent; color: inherit; padding: 10px 14px; font: .85rem/1.2 Arial, sans-serif; cursor: pointer; }
+.woodville-lightbox button:hover { background: #d9dfcf; }
+.woodville-lightbox figure { margin: 18px 0; }
+.woodville-lightbox img { display: block; width: 100%; max-height: 65dvh; object-fit: contain; }
+.woodville-lightbox figcaption { padding-top: 12px; font: .9rem/1.5 Arial, sans-serif; }
+.woodville-lightbox :focus-visible, .woodville-page a:focus-visible { outline: 3px solid #486348; outline-offset: 4px; }
+@media (max-width: 760px) {
+  .woodville-production, .woodville-trip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 480px) {
+  .woodville-page { padding-left: 20px; padding-right: 20px; }
+  .woodville-page .bike-nav { gap: 16px; }
+  .woodville-page .bike-hero { padding-top: 48px; }
+  .woodville-page .bike-hero h1 { font-size: clamp(2.7rem, 12vw, 3.6rem); }
+  .woodville-tim-grid, .woodville-green-grid { grid-template-columns: 1fr; }
+  .woodville-production, .woodville-trip-grid { gap: 22px 14px; }
+  .woodville-page .woodville-production figure { padding: 7px 7px 14px; }
+  .woodville-lightbox { padding: 14px; }
+  .woodville-lightbox button { padding: 10px; }
+}

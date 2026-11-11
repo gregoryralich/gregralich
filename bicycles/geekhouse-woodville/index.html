@@ -9,14 +9,17 @@
     <link rel="stylesheet" href="/style.css" />
     <link rel="stylesheet" href="/bicycles.css" />
     <link rel="stylesheet" href="/bicycles/bike-detail.css" />
+    <link rel="stylesheet" href="/bicycles/geekhouse-woodville/woodville.css" />
+    <script src="/bicycles/geekhouse-woodville/gallery.js" defer></script>
   </head>
   <body>
-    <main class="bike-page bike-detail">
+    <main class="bike-page bike-detail woodville-page">
       <nav class="bike-nav" aria-label="Bicycle page navigation">
         <a href="/bicycles.html#bikes">← All bikes</a>
         <a href="#story">Story</a>
         <a href="#build">Build</a>
         <a href="#photos">Photos</a>
+        <a href="#returned">Returned</a>
       </nav>
 
       <!-- Edit the introduction here. -->
@@ -24,7 +27,8 @@
         <p class="bike-kicker">Bikes</p>
         <h1>Geekhouse Woodville</h1>
         <p class="bike-lead">My touring bike</p>
-        <p>Photographs from before and during my 2010 cross-country trip are below. More about the bike and its build coming soon.</p>
+        <p>Built in Boston for a cross-country ride in 2010. Yellow first, green later, and still rolling.</p>
+        <figure class="woodville-primary"><img src="/images/Geekhouse%20Woodville/geekhouse-woodville-yellow-complete.jpg" width="1024" height="768" alt="The completed yellow Geekhouse Woodville with leather saddle, drop bars, fenders, and racks" fetchpriority="high" /><figcaption>The original yellow Woodville, ready for the road.</figcaption></figure>
       </header>
 
       <section class="bike-section bike-story" id="story">
@@ -39,32 +43,63 @@
           set it up with flat bars and basket, today it is a mix of each history with drop bars and a nice older 105 group. The only originaly part is the Chris King headset. </p>
       </section>
 
-      <section class="bike-section bike-story" id="photos">
-        <h2>A closer look.</h2>
-        <figure>
+      <section class="bike-section woodville-chapter" id="photos" aria-labelledby="production-title">
+        <p class="bike-meta">01 · Made in Boston · 2010</p>
+        <h2 id="production-title">From drawing to yellow.</h2>
+        <p>The frame build, the powder coat, and the first decals. A few snapshots from the shop.</p>
+        <div class="woodville-production"><figure><a href="/images/Geekhouse%20Woodville/geekhouse-woodville-frame-drawing.jpg"><img src="/images/Geekhouse%20Woodville/geekhouse-woodville-frame-drawing.jpg" width="480" height="640" alt="The plan: the original frame drawing." loading="lazy" /></a><figcaption>The plan: the original frame drawing.</figcaption></figure><figure><a href="/images/Geekhouse%20Woodville/geekhouse-woodville-frame-jig.jpg"><img src="/images/Geekhouse%20Woodville/geekhouse-woodville-frame-jig.jpg" width="800" height="600" alt="The steel frame taking shape in the jig." loading="lazy" /></a><figcaption>The steel frame taking shape in the jig.</figcaption></figure><figure><a href="/images/Geekhouse%20Woodville/geekhouse-woodville-powder-ral-1023-safety-yellow.jpg"><img src="/images/Geekhouse%20Woodville/geekhouse-woodville-powder-ral-1023-safety-yellow.jpg" width="600" height="800" alt="RAL 1023. Safety yellow." loading="lazy" /></a><figcaption>RAL 1023. Safety yellow.</figcaption></figure><figure><a href="/images/Geekhouse%20Woodville/geekhouse-woodville-frame-after-powdercoat.jpg"><img src="/images/Geekhouse%20Woodville/geekhouse-woodville-frame-after-powdercoat.jpg" width="800" height="600" alt="Fresh out of powder coat." loading="lazy" /></a><figcaption>Fresh out of powder coat.</figcaption></figure><figure><a href="/images/Geekhouse%20Woodville/geekhouse-woodville-frame-with-decals.jpg"><img src="/images/Geekhouse%20Woodville/geekhouse-woodville-frame-with-decals.jpg" width="800" height="600" alt="Yellow paint, black Geekhouse decals." loading="lazy" /></a><figcaption>Yellow paint, black Geekhouse decals.</figcaption></figure></div>
+      </section>
+      <section class="bike-section woodville-chapter" id="tim-photos" aria-labelledby="tim-title">
+        <p class="bike-meta">02 · Photographs by Tim Ralich · April 2010</p>
+        <h2 id="tim-title">Built, before the trip.</h2>
+        <p>My younger brother Tim took these photographs when the bike was completed, before my cross-country trip in 2010.</p>
+        <p>The one-piece bar-stem was built by Ian of Icarus Frames: a steel stem fillet-brazed to a steel handlebar, finished with Brooks leather tape and Cane Creek brake levers.</p>
+        <p class="woodville-gallery-hint">Select a photograph to open the gallery. Use the arrows to look through all four.</p>
+        <div class="woodville-tim-grid"><figure><a href="/images/Geekhouse%20Woodville/geekhouse-woodville-icarus-bar-stem.png" data-gallery="tim"><img src="/images/Geekhouse%20Woodville/geekhouse-woodville-icarus-bar-stem.png" width="1018" height="678" alt="The one-piece steel bar and stem, built by Ian of Icarus Frames." loading="lazy" /></a><figcaption>The one-piece steel bar and stem, built by Ian of Icarus Frames.</figcaption></figure><figure><a href="/images/Geekhouse%20Woodville/geekhouse-woodville-downtube-fork-rack.png" data-gallery="tim"><img src="/images/Geekhouse%20Woodville/geekhouse-woodville-downtube-fork-rack.png" width="1024" height="768" alt="The down-tube decal, fork, fender, and front rack." loading="lazy" /></a><figcaption>The down-tube decal, fork, fender, and front rack.</figcaption></figure><figure><a href="/images/Geekhouse%20Woodville/geekhouse-woodville-headbadge.png" data-gallery="tim"><img src="/images/Geekhouse%20Woodville/geekhouse-woodville-headbadge.png" width="1022" height="730" alt="The Geekhouse headbadge and Chris King headset." loading="lazy" /></a><figcaption>The Geekhouse headbadge and Chris King headset.</figcaption></figure><figure><a href="/images/Geekhouse%20Woodville/geekhouse-woodville-cane-creek-brake-lever.png" data-gallery="tim"><img src="/images/Geekhouse%20Woodville/geekhouse-woodville-cane-creek-brake-lever.png" width="1024" height="768" alt="Cane Creek brake levers and Brooks leather bar tape." loading="lazy" /></a><figcaption>Cane Creek brake levers and Brooks leather bar tape.</figcaption></figure></div>
+      </section>
+      <section class="bike-section woodville-chapter" id="on-the-road" aria-labelledby="trip-title">
+        <p class="bike-meta">03 · From the Tumblr journal · 2010</p>
+        <h2 id="trip-title">Across the country.</h2>
+        <p>A few photographs from before and during the ride, preserved from my original trip blog.</p>
+        <div class="woodville-trip-grid"><figure>
           <a href="/images/Geekhouse%20Woodville/geekhouse-woodville-greg-and-mom-before-trip.jpg"><img src="/images/Geekhouse%20Woodville/geekhouse-woodville-greg-and-mom-before-trip.jpg" alt="Greg and his mom with their bicycles before his 2010 cross-country trip" width="1280" height="857" loading="lazy" /></a>
           <figcaption>A ride around my hometown with my Mom before my 2010 cross-country trip.</figcaption>
-        </figure>
-        <figure>
+        </figure><figure>
           <a href="/images/Geekhouse%20Woodville/geekhouse-woodville-mountain-road.jpg"><img src="/images/Geekhouse%20Woodville/geekhouse-woodville-mountain-road.jpg" alt="Greg with the yellow Woodville and trailer beside a mountain road" width="640" height="428" loading="lazy" /></a>
           <figcaption>On the cross-country trip at Monarch Pass in Colorado when my derailleur hanger broke and I had to set it up single-speed. This was likely the fault of the Bob trailer which put TREMENDOUS force on the dropouts.</figcaption>
-        </figure>
-        <figure>
+        </figure><figure>
           <a href="/images/Geekhouse%20Woodville/geekhouse-woodville-scenic-overlook.jpg"><img src="/images/Geekhouse%20Woodville/geekhouse-woodville-scenic-overlook.jpg" alt="Loaded touring bicycles and trailer at a scenic overlook" width="640" height="428" loading="lazy" /></a>
           <figcaption>Don't have that many good driveside photos from cross-country but I remember this lookout well.</figcaption>
-        </figure>
-        <figure>
+        </figure><figure>
           <a href="/images/Geekhouse%20Woodville/geekhouse-woodville-trailer-on-trail.jpg"><img src="/images/Geekhouse%20Woodville/geekhouse-woodville-trailer-on-trail.jpg" alt="Greg with the Woodville and yellow trailer on a shaded paved trail" width="640" height="428" loading="lazy" /></a>
           <figcaption>The Woodville and trailer on the road.</figcaption>
-        </figure>
-        <figure>
+        </figure><figure>
           <a href="/images/Geekhouse%20Woodville/geekhouse-woodville-rear-wheel-and-trailer.jpg"><img src="/images/Geekhouse%20Woodville/geekhouse-woodville-rear-wheel-and-trailer.jpg" alt="Close-up of the Woodville rear wheel and loaded trailer with an American flag" width="1280" height="857" loading="lazy" /></a>
           <figcaption>Rear wheel, trailer, and flag.</figcaption>
-        </figure>
-        <figure>
+        </figure><figure>
           <a href="/images/Geekhouse%20Woodville/geekhouse-woodville-two-bikes-by-ocean.jpg"><img src="/images/Geekhouse%20Woodville/geekhouse-woodville-two-bikes-by-ocean.jpg" alt="Pink and yellow Geekhouse Woodville bicycles beside the ocean" width="640" height="480" loading="lazy" /></a>
           <figcaption>The two Woodvilles by the ocean.</figcaption>
-        </figure>
+        </figure></div>
+        <p><a href="/cross-country.html">Read the cross-country journal →</a></p>
+      </section>
+      <section class="bike-section bike-story" id="returned">
+        <p class="bike-meta">04 · Stolen &amp; returned</p>
+        <h2>Back to me.</h2>
+        <p>This bike was stolen—and eventually returned to me. After I got it back, I rebuilt it and had it powder coated green.</p>
+        <!-- Expand the theft and return story here, with dates, details, and links. -->
+      </section>
+      <section class="bike-section bike-story" id="embrocation">
+        <p class="bike-meta">05 · In print</p>
+        <h2>Embrocation Cycling Journal.</h2>
+        <p>I wrote a story about this bicycle for <em>Embrocation Cycling Journal</em>.</p>
+        <p><a href="https://theradavist.com/embrocation-vol-9" target="_blank" rel="noopener noreferrer">Embrocation, Volume 9 on The Radavist ↗</a></p>
+        <!-- Add an excerpt, publication photographs, or more about the piece here. -->
+      </section>
+      <section class="bike-section woodville-chapter" id="green" aria-labelledby="green-title">
+        <p class="bike-meta">06 · After the return</p>
+        <h2 id="green-title">A second life, in green.</h2>
+        <p>The green powder coat came only after the bike was returned and rebuilt. It has had a flat-bar-and-basket setup, and today mixes those histories with drop bars and an older Shimano 105 group.</p>
+        <div class="woodville-green-grid"><figure><a href="/images/Geekhouse%20Woodville/geekhouse-woodville-green-tour.jpg"><img src="/images/Geekhouse%20Woodville/geekhouse-woodville-green-tour.jpg" width="1600" height="1200" alt="The Woodville in green, loaded for another ride." loading="lazy" /></a><figcaption>The Woodville in green, loaded for another ride.</figcaption></figure><figure><a href="/images/Geekhouse%20Woodville/geekhouse-woodville-green-in-the-woods.jpg"><img src="/images/Geekhouse%20Woodville/geekhouse-woodville-green-in-the-woods.jpg" width="1200" height="1600" alt="Still finding its way into the woods." loading="lazy" /></a><figcaption>Still finding its way into the woods.</figcaption></figure><figure><a href="/images/Geekhouse%20Woodville/geekhouse-woodville-green-front-rack.jpg"><img src="/images/Geekhouse%20Woodville/geekhouse-woodville-green-front-rack.jpg" width="1200" height="1600" alt="A closer look at the green frame and front rack." loading="lazy" /></a><figcaption>A closer look at the green frame and front rack.</figcaption></figure></div>
       </section>
 
       <nav class="bike-section" aria-label="Explore the bicycle collection">
@@ -79,5 +114,10 @@
         <a href="/index.html">Greg Ralich</a>
       </footer>
     </main>
+<dialog class="woodville-lightbox" aria-labelledby="gallery-title">
+      <div class="woodville-lightbox-top"><h2 id="gallery-title">Tim Ralich · April 2010</h2><button type="button" data-close aria-label="Close photo gallery">Close ×</button></div>
+      <figure><img data-gallery-image alt="" /><figcaption data-gallery-caption></figcaption></figure>
+      <div class="woodville-gallery-controls"><button type="button" data-previous aria-label="Previous photograph">← Previous</button><span data-gallery-count aria-live="polite"></span><button type="button" data-next aria-label="Next photograph">Next →</button></div>
+    </dialog>
   </body>
 </html>
