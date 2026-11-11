@@ -81,3 +81,15 @@
 @media (max-width: 600px) {
   .woodville-page .woodville-stolen-instagram { width: 100%; }
 }
+
+/* Small archival images stay compact, with enough source pixels for sharp screens. */
+.woodville-story-intro { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 250px); gap: 30px; align-items: start; }
+.woodville-cockpit-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 300px); gap: 30px; align-items: start; }
+.woodville-page :is(.woodville-story-intro, .woodville-cockpit-layout) figure { margin: 0; }
+.woodville-page :is(.woodville-story-intro, .woodville-cockpit-layout) img { display: block; margin: 0 0 12px; }
+.woodville-trip-grid .woodville-small-snapshot { max-width: 280px; }
+@media (max-width: 600px) {
+  .woodville-story-intro, .woodville-cockpit-layout { grid-template-columns: 1fr; }
+  .woodville-story-intro figure { max-width: 250px; }
+  .woodville-cockpit-layout figure { max-width: 300px; }
+}
