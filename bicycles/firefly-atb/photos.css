@@ -12,3 +12,6 @@
   max-width: 420px;
   height: auto;
 }
+
+.firefly-flickr-album a { display: block; }
+.firefly-flickr-album figcaption a { display: inline; }

@@ -246,7 +246,9 @@
   outline-offset: 4px;
 }
 #bikes [data-bike="colnago-super"] { --photo-position: 50% 58%; }
-#bikes [data-bike="firefly-atb"] { --photo-position: 50% 85%; }
+#bikes [data-bike="firefly-atb"] { --photo-position: 50% 50%; }
+/* Keep both wheels and the whole studio profile visible in the card. */
+#bikes [data-bike="firefly-atb"] .bike-preview img { object-fit: contain; background: #faf8f6; }
 #bikes [data-bike="geekhouse-woodville"] { --photo-position: 50% 60%; }
 #bikes [data-bike="seven-tsunami"] { --photo-position: 50% 70%; }
 #bikes [data-bike="surly-pugsley"] { --photo-position: 50% 75%; }
