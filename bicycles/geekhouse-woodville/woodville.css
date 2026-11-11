@@ -15,7 +15,7 @@
 .woodville-green-grid figure:first-child { grid-column: 1 / -1; }
 .woodville-page :is(.woodville-trip-grid,.woodville-tim-grid,.woodville-green-grid) figure { margin: 0; }
 .woodville-page :is(.woodville-trip-grid,.woodville-tim-grid,.woodville-green-grid) img { display: block; margin: 0 0 12px; }
-.woodville-tim-grid a { display: block; cursor: zoom-in; }
+.woodville-tim-grid a, .woodville-production a { display: block; cursor: zoom-in; }
 .woodville-gallery-hint { font: .85rem/1.5 Arial, sans-serif; }
 .woodville-lightbox { width: min(850px, calc(100% - 32px)); max-height: 94dvh; box-sizing: border-box; border: 1px solid #486348; padding: 22px; background: #f2eddd; color: #253426; }
 .woodville-lightbox::backdrop { background: #101a12e6; }
