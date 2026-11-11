@@ -7,7 +7,26 @@
 .woodville-production { grid-template-columns: repeat(3, minmax(0, 1fr)); padding: 24px 10px 10px; }
 .woodville-page .woodville-production figure { margin: 0; padding: 12px 12px 22px; background: #fffdf5; color: #253426; box-shadow: 0 3px 9px #25342626; transform: rotate(-2deg); }
 .woodville-production figure:nth-child(even) { transform: rotate(2deg); }
-.woodville-page .woodville-production img { display: block; aspect-ratio: 1; object-fit: contain; background: #eeeade; }
+.woodville-production a { aspect-ratio: 1; overflow: hidden; }
+.woodville-page .woodville-production img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: var(--photo-position, 50% 50%); transform: scale(var(--photo-zoom, 1)); background: #eeeade; }
+/* Per-photo thumbnail framing. Edit the matching filename below:
+   --photo-position: horizontal vertical (0% left/top, 50% center, 100% right/bottom).
+   --photo-zoom: 1 fills the square; 1.1 adds 10% zoom.
+   Example: 50% 30% moves a portrait crop toward the top.
+   The gallery always keeps the full original photograph. */
+.woodville-production [data-photo="frame-drawing"] { --photo-position: 50% 50%; --photo-zoom: 1; }
+.woodville-production [data-photo="build-sheet"] { --photo-position: 50% 50%; --photo-zoom: 1; }
+.woodville-production [data-photo="tubes-and-build-sheet"] { --photo-position: 50% 62%; --photo-zoom: 1; }
+.woodville-production [data-photo="tubes-and-welding-tools"] { --photo-position: 50% 58%; --photo-zoom: 1; }
+.woodville-production [data-photo="tube-machining"] { --photo-position: 43% 50%; --photo-zoom: 1; }
+.woodville-production [data-photo="frame-jig"] { --photo-position: 48% 50%; --photo-zoom: 1; }
+.woodville-production [data-photo="frame-jig-full"] { --photo-position: 52% 50%; --photo-zoom: 1; }
+.woodville-production [data-photo="bare-frame-shop"] { --photo-position: 65% 50%; --photo-zoom: 1; }
+.woodville-production [data-photo="bare-frame-front"] { --photo-position: 50% 42%; --photo-zoom: 1; }
+.woodville-production [data-photo="bare-frame-detail"] { --photo-position: 42% 50%; --photo-zoom: 1; }
+.woodville-production [data-photo="powder-ral-1023-safety-yellow"] { --photo-position: 50% 65%; --photo-zoom: 1; }
+.woodville-production [data-photo="frame-after-powdercoat"] { --photo-position: 50% 50%; --photo-zoom: 1; }
+.woodville-production [data-photo="frame-with-decals"] { --photo-position: 50% 50%; --photo-zoom: 1; }
 .woodville-production figcaption { padding-top: 12px; }
 .woodville-tim-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .woodville-trip-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
