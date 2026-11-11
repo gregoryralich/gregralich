@@ -73,3 +73,11 @@
 /* Vimeo follows the trip photographs and scales with the page. */
 .woodville-trip-video iframe { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; border: 0; }
 .woodville-trip-video figcaption { margin-top: 10px; }
+
+/* Half-width Instagram post, expanding to fit narrow screens. */
+.woodville-page .woodville-stolen-instagram { width: 50%; min-width: min(326px, 100%); max-width: 100%; }
+.woodville-stolen-instagram iframe { display: block; width: 100%; height: 620px; border: 0; background: white; }
+.woodville-stolen-instagram figcaption { margin-top: 10px; }
+@media (max-width: 600px) {
+  .woodville-page .woodville-stolen-instagram { width: 100%; }
+}
