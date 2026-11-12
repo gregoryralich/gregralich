@@ -20,7 +20,7 @@
   text-underline-offset: 5px;
 }
 .bike-hero {
-  padding: 95px 0 100px;
+  padding: 95px 0 40px;
 }
 .bike-kicker,
 .bike-meta {
@@ -45,7 +45,7 @@
 }
 .bike-section {
   border-top: 1px solid var(--line);
-  padding: 65px 0 80px;
+  padding: 35px 0 40px;
 }
 .bike-section h2 {
   font-size: clamp(2.5rem, 5vw, 4.5rem);
@@ -207,10 +207,10 @@
     padding: 0 22px 65px;
   }
   .bike-hero {
-    padding: 65px 0 70px;
+    padding: 65px 0 35px;
   }
   .bike-section {
-    padding: 50px 0 55px;
+    padding: 30px 0 35px;
   }
   .bike-grid,
   .bike-notes {
