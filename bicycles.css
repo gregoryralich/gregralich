@@ -19,6 +19,15 @@
 .bike-nav a {
   text-underline-offset: 5px;
 }
+.bike-lead-photo {
+  margin: 32px 0 0;
+}
+.bike-lead-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+}
 .bike-hero {
   padding: 95px 0 40px;
 }
