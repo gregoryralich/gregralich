@@ -23,3 +23,7 @@ The collection needs no browser JavaScript or external CMS. It renders all post 
 - Image derivatives use the best explicitly exposed recovered source and are not upscaled. Camera originals were not available for all images.
 - Original copy retains period-specific wording, promotions, and contact details, identified by the archive note. The new post introduction and closing are separate from those historical sections.
 - A supplemental external photograph linked from Kristin's answer was unavailable; its original hyperlink remains in the interview. All embedded images are local.
+
+## Series hero image
+
+Use `/images/talkin-trash/talkin-trash-hero.jpg` as the shared Talkin Trash hero and social preview image. The series index, foundational post header, post card, and Sustainability feature use it. Preserve the complete photograph with proportional sizing, without cropping. For future post headers, copy the `trash-hero-image` figure after the navigation and use the shared photo for series branding. Keep historical interview photographs unchanged inside the articles.
