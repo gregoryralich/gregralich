@@ -1,0 +1,24 @@
+/* Radio-specific details; the rest follows the shared site palette and layout. */
+.radio-page .hero { min-height: auto; padding-top: 44px; }
+.radio-page .story-nav { margin-bottom: 64px; }
+.radio-page .hero h1 { margin-bottom: 30px; }
+.radio-dial { max-width: 750px; width: 100%; margin-top: 42px; padding: 24px; border: 1px solid var(--line); background: var(--dark-green); }
+.dial-label { display: flex; justify-content: space-between; gap: 16px; font: .7rem Arial, sans-serif; text-transform: uppercase; letter-spacing: .16em; }
+.dial-scale { position: relative; display: flex; justify-content: space-between; align-items: start; margin-top: 18px; padding-top: 28px; background: repeating-linear-gradient(to right, var(--cream) 0 1px, transparent 1px 2%); background-size: 100% 16px; background-repeat: no-repeat; font-family: 'Courier New', monospace; }
+.dial-scale strong { color: #ffd789; border-top: 3px solid #ffd789; padding-top: 5px; margin-top: -8px; }
+.radio-dial > p { margin: 22px 0 0; font-style: italic; }
+.station-entry { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 22px 0 28px; }
+.radio-page h3 { margin: 8px 0 14px; font-weight: 400; font-size: clamp(1.6rem, 3vw, 2.4rem); line-height: 1.15; }
+.station-entry h3 { font-size: 3.5rem; }
+.station-entry p:not(.eyebrow), .article-note p:not(.eyebrow), .sticker-entry p:not(.eyebrow) { font-size: 1.15rem; max-width: 650px; }
+.article-note { margin-top: 36px; padding: 26px; border-left: 3px solid var(--cream); background: var(--dark-green); }
+.sticker-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin: 36px 0 24px; }
+.sticker-entry { padding: 26px; border: 1px solid var(--line); }
+.radio-page .quiet-note, .sticker-entry .archive-note { font-family: Arial, sans-serif; font-size: .9rem; }
+.sticker-entry img { width: 100%; height: auto; display: block; margin-bottom: 24px; }
+@media (max-width: 600px) {
+  .radio-page .story-nav { margin-bottom: 48px; }
+  .sticker-list { grid-template-columns: minmax(0, 1fr); }
+  .radio-dial { padding: 18px; }
+  .dial-scale { font-size: .85rem; }
+}

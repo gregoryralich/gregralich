@@ -10,6 +10,7 @@ A static personal website. HTML and CSS are served directly; there is no build s
 - `bicycles/bike-detail.css`: shared layout for individual bicycle pages.
 - `jims-photos.html`, `amesbury-postcards.html`, and `welcome-to-looserville.html`: photo stories, sharing `story.css`.
 - `cross-country.html` through `cross-country-5.html`: original trip journal, sharing `cross-country.css`.
+- `radio.html` and `radio.css`: favorite stations, Bob Bittner/WJIB, and a sticker archive. Add stations and original sticker images in the commented sections.
 - `style.css`: shared colors, typography, layout, navigation, footers, and press cards. Change the variables at the top for site-wide colors and widths.
 - `images/`: images and existing archive media used by the site. Keep paths and letter case exact.
 
