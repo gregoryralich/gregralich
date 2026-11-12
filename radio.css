@@ -22,3 +22,31 @@
   .radio-dial { padding: 18px; }
   .dial-scale { font-size: .85rem; }
 }
+
+/* A saved note from Bob: a warm paper panel against the green archive. */
+.bob-spotlight {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 32px;
+  margin: 42px 0;
+  padding: 32px;
+  background: var(--cream);
+  color: var(--dark-green);
+  border-top: 6px solid #d4b36e;
+}
+.bob-spotlight-copy { min-width: 0; }
+.radio-page .bob-spotlight h3 { font-size: clamp(2.2rem, 4vw, 3.6rem); }
+.bob-spotlight blockquote { margin: 28px 0 12px; }
+.bob-spotlight blockquote p { font-size: clamp(1.3rem, 2.2vw, 1.8rem); line-height: 1.35; }
+.bob-spotlight .bob-credit { font-family: Arial, sans-serif; font-size: .8rem; }
+.bob-spotlight-copy > p:last-child { margin-top: 28px; font-size: 1.05rem; }
+.bob-spotlight figure { min-width: 0; margin: 0; }
+.bob-spotlight img { display: block; width: 100%; height: auto; border: 1px solid #ccc6b5; }
+.bob-spotlight figcaption { margin-top: 12px; font: .75rem/1.5 Arial, sans-serif; }
+.bob-spotlight a:focus-visible { outline-color: var(--dark-green); }
+.sticker-list { align-items: start; }
+@media (max-width: 750px) {
+  .bob-spotlight { grid-template-columns: minmax(0, 1fr); gap: 24px; padding: 24px; }
+  .bob-spotlight figure { width: 100%; max-width: 380px; margin: 0 auto; }
+}
