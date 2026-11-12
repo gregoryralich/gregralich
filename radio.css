@@ -50,3 +50,34 @@
   .bob-spotlight { grid-template-columns: minmax(0, 1fr); gap: 24px; padding: 24px; }
   .bob-spotlight figure { width: 100%; max-width: 380px; margin: 0 auto; }
 }
+
+/* The painted sign stays intact, framed like a keepsake. */
+.memories-sign {
+  width: 100%;
+  max-width: 625px;
+  margin: 32px 0;
+  padding: 10px;
+  border: 2px solid var(--cream);
+  background: var(--dark-green);
+}
+.memories-sign img { display: block; width: 100%; height: auto; }
+.listen-note {
+  margin: 32px 0;
+  padding: 28px;
+  border: 1px solid #d4b36e;
+  border-left: 5px solid #d4b36e;
+  background: var(--dark-green);
+}
+.listen-note > p:not(.eyebrow) { font-size: 1.2rem; }
+.listen-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 18px;
+  background: var(--cream);
+  color: var(--dark-green);
+  font: 1rem/1.4 Arial, sans-serif;
+}
+.listen-link:hover { background: #d9dfcf; }
+@media (max-width: 600px) {
+  .listen-note { padding: 20px; }
+}
