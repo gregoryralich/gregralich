@@ -11,6 +11,10 @@
 .photo-lightbox :focus-visible { outline: 3px solid #486348; outline-offset: 4px; }
 
 .photo-gallery-preview a { display: block; cursor: zoom-in; }
+/* Compact entry point for galleries within longer stories. */
+.photo-gallery-preview--compact { max-width: 360px; margin: 24px 0; }
+.photo-gallery-preview--compact img { display: block; width: 100%; height: auto; margin: 0 0 10px; }
+.photo-gallery-preview--compact figcaption { font: .85rem/1.5 Arial, sans-serif; }
 @media (max-width: 480px) {
   .photo-lightbox { padding: 14px; }
   .photo-lightbox button { padding: 10px; }
