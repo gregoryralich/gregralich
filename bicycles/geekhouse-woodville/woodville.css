@@ -50,14 +50,11 @@
   .woodville-page .woodville-production figure { padding: 7px 7px 14px; }
 }
 
-/* Keep both printed spreads uncropped and at a modest size. */
-.woodville-embrocation-photos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-top: 30px; }
+/* Stack the printed spreads at their natural width, shrinking to fit smaller screens. */
+.woodville-embrocation-photos { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; max-width: 655px; margin-top: 30px; }
 .woodville-page .woodville-embrocation-photos figure { margin: 0; }
 .woodville-page .woodville-embrocation-photos img { display: block; margin: 0; }
 .woodville-page .woodville-photo-credit { font: .9rem/1.6 Arial, sans-serif; }
-@media (max-width: 600px) {
-  .woodville-embrocation-photos { grid-template-columns: 1fr; }
-}
 
 /* Vimeo follows the trip photographs and scales with the page. */
 .woodville-trip-video iframe { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; border: 0; }
