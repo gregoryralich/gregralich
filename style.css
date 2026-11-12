@@ -296,3 +296,18 @@ a:focus-visible {
   max-width: 750px;
   height: auto;
 }
+
+/* Homepage portrait: preserve the complete photo at every screen size. */
+.home-photo-hero {
+  min-height: auto;
+}
+.home-lead-photo {
+  width: min(100%, 480px);
+  margin: 0 0 40px;
+}
+.home-lead-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+}
