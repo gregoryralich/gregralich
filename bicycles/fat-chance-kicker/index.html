@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="/style.css" />
     <link rel="stylesheet" href="/bicycles.css" />
     <link rel="stylesheet" href="/bicycles/bike-detail.css" />
+    <link rel="stylesheet" href="/bicycles/photo-gallery.css" />
+    <script src="/bicycles/photo-gallery.js" defer></script>
   </head>
   <body>
     <main class="bike-page bike-detail">
@@ -39,15 +41,51 @@
         <p>Components and build notes coming soon.</p>
       </section>
 
-      <section class="bike-section bike-story" id="photos">
-        <h2>A closer look.</h2>
-        <!-- Add photos using absolute paths, for example:
-        <figure>
-          <img src="/images/fat-chance-kicker.jpg" alt="Fat Chance Kicker, viewed from the drivetrain side" loading="lazy" />
-          <figcaption>Add a caption here.</figcaption>
-        </figure>
-        -->
-        <p>Photographs coming soon.</p>
+      <section class="bike-section bike-story" id="photos" aria-labelledby="as-bought-title">
+        <h2 id="as-bought-title">As-Bought</h2>
+        <p>Ten photographs from the original listing. Select the image to open the gallery, then use Previous / Next or the arrow keys to browse.</p>
+        <div data-gallery-title="As-Bought">
+          <figure class="photo-gallery-preview">
+            <a href="/images/fat-chance-kicker/as-bought/P4152856.JPG" data-gallery="as-bought"><img src="/images/fat-chance-kicker/as-bought/P4152856.JPG" width="2048" height="1536" alt="The Fat Chance Kicker as shown in the original listing." loading="lazy" /></a>
+            <figcaption>The Fat Chance Kicker as shown in the original listing.</figcaption>
+          </figure>
+          <figure hidden>
+            <a href="/images/fat-chance-kicker/as-bought/P4152857.JPG" data-gallery="as-bought"><img src="/images/fat-chance-kicker/as-bought/P4152857.JPG" width="2048" height="1536" alt="Another drivetrain-side view from the original listing." loading="lazy" /></a>
+            <figcaption>Another drivetrain-side view from the original listing.</figcaption>
+          </figure>
+          <figure hidden>
+            <a href="/images/fat-chance-kicker/as-bought/P4152858.JPG" data-gallery="as-bought"><img src="/images/fat-chance-kicker/as-bought/P4152858.JPG" width="2048" height="1536" alt="The saddle, seatpost, and Hite-Rite spring." loading="lazy" /></a>
+            <figcaption>The saddle, seatpost, and Hite-Rite spring.</figcaption>
+          </figure>
+          <figure hidden>
+            <a href="/images/fat-chance-kicker/as-bought/P4152859.JPG" data-gallery="as-bought"><img src="/images/fat-chance-kicker/as-bought/P4152859.JPG" width="2048" height="1536" alt="The rear derailleur and rear wheel." loading="lazy" /></a>
+            <figcaption>The rear derailleur and rear wheel.</figcaption>
+          </figure>
+          <figure hidden>
+            <a href="/images/fat-chance-kicker/as-bought/P4152860.JPG" data-gallery="as-bought"><img src="/images/fat-chance-kicker/as-bought/P4152860.JPG" width="2048" height="1536" alt="The triple crankset and front derailleur." loading="lazy" /></a>
+            <figcaption>The triple crankset and front derailleur.</figcaption>
+          </figure>
+          <figure hidden>
+            <a href="/images/fat-chance-kicker/as-bought/P4152861.JPG" data-gallery="as-bought"><img src="/images/fat-chance-kicker/as-bought/P4152861.JPG" width="2048" height="1536" alt="The True Temper tubing decal near the bottom bracket." loading="lazy" /></a>
+            <figcaption>The True Temper tubing decal near the bottom bracket.</figcaption>
+          </figure>
+          <figure hidden>
+            <a href="/images/fat-chance-kicker/as-bought/P4152862.JPG" data-gallery="as-bought"><img src="/images/fat-chance-kicker/as-bought/P4152862.JPG" width="2048" height="1536" alt="The handlebar, stem, and front end." loading="lazy" /></a>
+            <figcaption>The handlebar, stem, and front end.</figcaption>
+          </figure>
+          <figure hidden>
+            <a href="/images/fat-chance-kicker/as-bought/P4152863.JPG" data-gallery="as-bought"><img src="/images/fat-chance-kicker/as-bought/P4152863.JPG" width="2048" height="1536" alt="The Fat Chance frame decal." loading="lazy" /></a>
+            <figcaption>The Fat Chance frame decal.</figcaption>
+          </figure>
+          <figure hidden>
+            <a href="/images/fat-chance-kicker/as-bought/P4152864.JPG" data-gallery="as-bought"><img src="/images/fat-chance-kicker/as-bought/P4152864.JPG" width="2048" height="1536" alt="The cockpit and handlebar markings." loading="lazy" /></a>
+            <figcaption>The cockpit and handlebar markings.</figcaption>
+          </figure>
+          <figure hidden>
+            <a href="/images/fat-chance-kicker/as-bought/P4152865.JPG" data-gallery="as-bought"><img src="/images/fat-chance-kicker/as-bought/P4152865.JPG" width="2048" height="1536" alt="The frame serial number: 871063." loading="lazy" /></a>
+            <figcaption>The frame serial number: 871063.</figcaption>
+          </figure>
+        </div>
       </section>
 
       <nav class="bike-section" aria-label="Explore the bicycle collection">
@@ -66,5 +104,10 @@
         <a href="/index.html">Greg Ralich</a>
       </footer>
     </main>
+    <dialog class="photo-lightbox" aria-labelledby="gallery-title">
+      <div class="photo-lightbox-top"><h2 id="gallery-title">As-Bought</h2><button type="button" data-close aria-label="Close photo gallery">Close ×</button></div>
+      <figure><img data-gallery-image alt="" /><figcaption data-gallery-caption></figcaption></figure>
+      <div class="photo-gallery-controls"><button type="button" data-previous aria-label="Previous photograph">← Previous</button><span data-gallery-count aria-live="polite"></span><button type="button" data-next aria-label="Next photograph">Next →</button></div>
+    </dialog>
   </body>
 </html>

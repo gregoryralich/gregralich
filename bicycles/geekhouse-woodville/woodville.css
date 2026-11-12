@@ -35,17 +35,8 @@
 .woodville-page :is(.woodville-trip-grid,.woodville-tim-grid,.woodville-green-grid) figure { margin: 0; }
 .woodville-page :is(.woodville-trip-grid,.woodville-tim-grid,.woodville-green-grid) img { display: block; margin: 0 0 12px; }
 .woodville-tim-grid a, .woodville-production a { display: block; cursor: zoom-in; }
+.woodville-page a:focus-visible { outline: 3px solid #486348; outline-offset: 4px; }
 .woodville-gallery-hint { font: .85rem/1.5 Arial, sans-serif; }
-.woodville-lightbox { width: min(850px, calc(100% - 32px)); max-height: 94dvh; box-sizing: border-box; border: 1px solid #486348; padding: 22px; background: #f2eddd; color: #253426; }
-.woodville-lightbox::backdrop { background: #101a12e6; }
-.woodville-lightbox-top, .woodville-gallery-controls { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-.woodville-lightbox h2 { margin: 0; font: 1rem/1.4 Arial, sans-serif; }
-.woodville-lightbox button { border: 1px solid #486348; background: transparent; color: inherit; padding: 10px 14px; font: .85rem/1.2 Arial, sans-serif; cursor: pointer; }
-.woodville-lightbox button:hover { background: #d9dfcf; }
-.woodville-lightbox figure { margin: 18px 0; }
-.woodville-lightbox img { display: block; width: 100%; max-height: 65dvh; object-fit: contain; }
-.woodville-lightbox figcaption { padding-top: 12px; font: .9rem/1.5 Arial, sans-serif; }
-.woodville-lightbox :focus-visible, .woodville-page a:focus-visible { outline: 3px solid #486348; outline-offset: 4px; }
 @media (max-width: 760px) {
   .woodville-production, .woodville-trip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
@@ -57,8 +48,6 @@
   .woodville-tim-grid, .woodville-green-grid { grid-template-columns: 1fr; }
   .woodville-production, .woodville-trip-grid { gap: 22px 14px; }
   .woodville-page .woodville-production figure { padding: 7px 7px 14px; }
-  .woodville-lightbox { padding: 14px; }
-  .woodville-lightbox button { padding: 10px; }
 }
 
 /* Keep both printed spreads uncropped and at a modest size. */

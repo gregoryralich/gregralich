@@ -1,5 +1,5 @@
 (() => {
-  const dialog = document.querySelector('.woodville-lightbox');
+  const dialog = document.querySelector('.photo-lightbox');
   const allLinks = [...document.querySelectorAll('a[data-gallery]')];
   if (!dialog || !allLinks.length || typeof dialog.showModal !== 'function') return;
   const title = dialog.querySelector('#gallery-title');
