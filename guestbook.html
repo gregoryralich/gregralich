@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Guestbook — Greg Ralich</title>
+    <meta name="description" content="Nice bikes? Broken link? Just passing through? Leave a note in Greg Ralich's guestbook." />
+    <link rel="canonical" href="https://gregralich.com/guestbook.html" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="guestbook.css" />
+    <script src="guestbook.js" defer></script>
+  </head>
+  <body>
+    <main class="guestbook-page">
+      <nav class="guestbook-nav" aria-label="Guestbook navigation">
+        <a href="index.html">← Back to the homepage</a>
+        <a href="https://greg-ralich-guestbook.sincerecob2.chatgpt.site/admin">Greg’s desk ↗</a>
+      </nav>
+      <header class="guestbook-header">
+        <p class="eyebrow">A little corner of the internet</p>
+        <h1>You were here.</h1>
+        <p class="intro">Nice bikes? Broken link? Just passing through?<br />Leave a note.</p>
+      </header>
+      <section class="guestbook-box" aria-labelledby="sign-title">
+        <h2 id="sign-title">Sign the guestbook.</h2>
+        <form class="guestbook-form" id="sign" action="guestbook.html" method="post">
+          <label>Your name or nickname
+            <input name="name" autocomplete="nickname" maxlength="60" required />
+          </label>
+          <label>Your website <small>Optional. A full address, starting with https://</small>
+            <input name="website" type="url" autocomplete="url" maxlength="250" placeholder="https://" />
+          </label>
+          <label>Your note <small>Up to 1,200 characters. Keep it neighborly.</small>
+            <textarea name="message" maxlength="1200" rows="5" required></textarea>
+          </label>
+          <div class="guestbook-honeypot" aria-hidden="true">
+            <label>Leave this empty <input name="company" tabindex="-1" autocomplete="off" /></label>
+          </div>
+          <button type="submit" disabled>Leave your mark →</button>
+          <p id="form-status" class="guestbook-status" role="status" aria-live="polite"></p>
+        </form>
+        <p class="guestbook-notice">Your name, note, and optional website will be public after Greg approves them. No email address needed. Please leave out private information.</p>
+        <noscript><p>This guestbook needs JavaScript to send and read notes. You can also <a href="mailto:gregralich@gmail.com">email Greg</a>.</p></noscript>
+      </section>
+      <section class="guestbook-entries" aria-labelledby="entries-title">
+        <p class="eyebrow">Good company</p>
+        <h2 id="entries-title">The guestbook.</h2>
+        <p id="entries-status" class="guestbook-status" role="status"></p>
+        <div id="guestbook-entries"></div>
+        <button class="guestbook-more" id="guestbook-more" hidden>Read more notes →</button>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <p>Greg Ralich</p>
+      <p>Made by hand, more or less.</p>
+      <a href="index.html">← Back to the homepage</a>
+    </footer>
+  </body>
+</html>

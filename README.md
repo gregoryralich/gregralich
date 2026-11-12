@@ -1,6 +1,6 @@
 # gregralich.com
 
-A static personal website. HTML and CSS are served directly; there is no build step, database, application server, or JavaScript package dependency.
+A personal website served as static HTML, CSS, and JavaScript, with no build step or runtime package dependencies. A separate hosted Worker and D1 database power the guestbook and homepage visit counter.
 
 ## Editing
 
@@ -10,7 +10,6 @@ A static personal website. HTML and CSS are served directly; there is no build s
 - `bicycles/bike-detail.css`: shared layout for individual bicycle pages.
 - `jims-photos.html`, `amesbury-postcards.html`, and `welcome-to-looserville.html`: photo stories, sharing `story.css`.
 - `cross-country.html` through `cross-country-5.html`: original trip journal, sharing `cross-country.css`.
-- `radio.html` and `radio.css`: favorite stations, Bob Bittner/WJIB, and a sticker archive. Add stations and original sticker images in the commented sections.
 - `style.css`: shared colors, typography, layout, navigation, footers, and press cards. Change the variables at the top for site-wide colors and widths.
 - `images/`: images and existing archive media used by the site. Keep paths and letter case exact.
 
@@ -39,7 +38,7 @@ Cloudflare serves static files from the repository root. `.assetsignore` exclude
 
 The archive exclusion depends on the Workers static-assets uploader honoring `.assetsignore`. If switching to Cloudflare Pages or another host, deploy an explicit public-only directory rather than uploading the whole repository. Never publish `archive/`.
 
-`_headers` sets MIME-sniffing protection, prevents other sites framing this site, limits referrer information, and disables unneeded device permissions. Its Content Security Policy blocks object embeds, base-URL changes to other origins, framing, and form submissions. It does not yet restrict all script and network origins: YouTube, Instagram, and Ride with GPS require browser testing before a stricter policy is enabled. Verify these headers on the deployed domain after publication.
+`_headers` sets MIME-sniffing protection, prevents other sites framing this site, limits referrer information, and disables unneeded device permissions. Its Content Security Policy blocks object embeds, base-URL changes to other origins, framing, and off-site form submissions. It does not yet restrict all script and network origins: YouTube, Instagram, and Ride with GPS require browser testing before a stricter policy is enabled. Verify these headers on the deployed domain after publication.
 
 `404.html` is the not-found page. Keep static hosting configured to return a real 404 for missing paths rather than falling back to the homepage.
 
@@ -48,3 +47,12 @@ The archive exclusion depends on the Workers static-assets uploader honoring `.a
 The four original Tumblr MP3 files are preserved byte-for-byte in `archive/audio/`. They are not linked by public pages and are excluded from asset uploads. A public repository still makes these files accessible through GitHub. The website's existing “Audio omitted from this archive” notes remain accurate.
 
 Image optimization and archival image descriptions are separate follow-up work. No original image files were changed during the source cleanup.
+
+## Guestbook and visit counter
+
+- `guestbook.html`, `guestbook.css`, and `guestbook.js`: the public guestbook and homepage counter corner.
+- The companion service is `https://greg-ralich-guestbook.sincerecob2.chatgpt.site`. Its source lives in its own Sites repository, with versioned D1 migrations.
+- Open the “Greg’s desk” link on the guestbook and sign in with the ChatGPT account for `gregralich@gmail.com` to approve, unpublish, or delete entries. New entries stay pending until approved.
+- The counter starts from zero at launch in November 2026. It counts browser/IP pairs once per half-hour period and excludes common crawler user agents. It does not claim to count unique people.
+- The service uses a secret HMAC for short-lived deduplication and spam limits; it does not store raw IP addresses. Visitor text is rendered with `textContent`, never inserted as HTML.
+- `OWNER_EMAIL` and `SIGNING_SECRET` are hosted secrets, never browser settings or repository contents.

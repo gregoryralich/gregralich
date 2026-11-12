@@ -1,0 +1,41 @@
+/* The little old-web corner and its guestbook share the site's green and cream. */
+.web-corner { max-width: var(--max-width); margin: 0 auto; padding: 38px var(--side-padding) 42px; border-top: 1px solid var(--line); }
+.web-corner-inner { display: flex; justify-content: space-between; align-items: center; gap: 30px; flex-wrap: wrap; }
+.web-corner .eyebrow { margin: 0 0 14px; }
+.web-corner h2 { margin: 0 0 12px; font-size: clamp(1.7rem, 4vw, 2.4rem); font-weight: 400; line-height: 1.1; }
+.web-corner p { margin: 8px 0; }
+.web-corner-links { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+.web-corner a { text-underline-offset: 5px; }
+.visitor-counter { text-align: center; }
+.counter-digits { display: inline-flex; gap: 3px; padding: 6px; border: 2px solid #1a281b; background: #253426; box-shadow: inset 1px 1px 0 #788b70, 2px 2px 0 #25342680; }
+.counter-digits span { display: inline-grid; place-items: center; position: relative; min-width: 23px; height: 34px; background: #111a12; color: #f2eddd; border: 1px solid #718168; font: 26px/1 'Courier New', monospace; font-variant-numeric: tabular-nums; }
+.counter-digits span::after { content: ''; position: absolute; top: 50%; left: 0; right: 0; border-top: 1px solid #f2eddd24; }
+.counter-caption { display: block; margin-top: 10px; font: 11px/1.5 Arial, sans-serif; letter-spacing: .08em; text-transform: uppercase; }
+.counter-note { font: 12px/1.5 Arial, sans-serif; opacity: .8; }
+.guestbook-page { max-width: 860px; margin: 0 auto; padding: 32px var(--side-padding) 70px; }
+.guestbook-nav { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; font: .8rem/1.5 Arial, sans-serif; }
+.guestbook-nav a { text-underline-offset: 4px; }
+.guestbook-header { padding: 60px 0 36px; }
+.guestbook-header h1 { margin: 12px 0 22px; font-size: clamp(3.5rem, 10vw, 6.5rem); line-height: .95; letter-spacing: -.05em; font-weight: 400; }
+.guestbook-header .intro { font-size: 1.3rem; }
+.guestbook-box { border: 1px solid var(--line); padding: 28px; box-shadow: 5px 5px 0 #253426; }
+.guestbook-box h2, .guestbook-entries h2 { margin: 0 0 20px; font-size: 2rem; font-weight: 400; }
+.guestbook-form { display: grid; gap: 20px; }
+.guestbook-form label { display: grid; gap: 7px; font: .9rem/1.5 Arial, sans-serif; }
+.guestbook-form input, .guestbook-form textarea { box-sizing: border-box; width: 100%; border: 2px inset #c1c7b7; border-radius: 0; background: #f2eddd; color: #253426; padding: 12px; font: 1rem/1.5 Arial, sans-serif; }
+.guestbook-form textarea { resize: vertical; min-height: 140px; }
+.guestbook-form small, .guestbook-notice, .guestbook-status { font: .85rem/1.6 Arial, sans-serif; }
+.guestbook-form button, .guestbook-more { justify-self: start; padding: 12px 22px; border: 2px outset #f2eddd; border-radius: 0; background: #d9dfcf; color: #253426; font: bold 1rem/1.4 Arial, sans-serif; cursor: pointer; }
+.guestbook-form button:active, .guestbook-more:active { border-style: inset; }
+.guestbook-form button:disabled { opacity: .65; cursor: wait; }
+.guestbook-form :focus-visible, .guestbook-more:focus-visible { outline: 3px solid #f2eddd; outline-offset: 4px; }
+.guestbook-honeypot { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+.guestbook-notice { margin: 20px 0 0; opacity: .85; }
+.guestbook-status { margin: 0; min-height: 1.6em; }
+.guestbook-entries { margin-top: 60px; }
+.guestbook-entry { border-top: 1px solid var(--line); padding: 24px 0; }
+.guestbook-entry h3 { font-size: 1.4rem; font-weight: 400; margin: 0 0 5px; overflow-wrap: anywhere; }
+.guestbook-entry time { font: .75rem/1.5 Arial, sans-serif; opacity: .8; }
+.guestbook-entry p { white-space: pre-wrap; overflow-wrap: anywhere; font-size: 1.1rem; }
+.guestbook-entry a { font: .85rem/1.5 Arial, sans-serif; overflow-wrap: anywhere; }
+@media (max-width: 550px) { .web-corner-inner { align-items: flex-start; flex-direction: column; gap: 25px; } .visitor-counter { text-align: left; } .guestbook-box { padding: 20px; } .guestbook-header { padding-top: 45px; } }
