@@ -81,3 +81,31 @@
 @media (max-width: 600px) {
   .listen-note { padding: 20px; }
 }
+
+/* Other favorites follow the two Bob presets, in listening order. */
+.memory-app-entry { border-top: 0; }
+.radio-page .memory-app-entry h3 { font-size: clamp(1.7rem, 3vw, 2.6rem); }
+.radio-page .other-stations-title { margin-top: 40px; }
+.favorite-stations {
+  list-style: none;
+  counter-reset: station;
+  margin: 28px 0 0;
+  padding: 0;
+}
+.favorite-stations li {
+  counter-increment: station;
+  position: relative;
+  padding: 20px 0 20px 46px;
+  border-top: 1px solid var(--line);
+}
+.favorite-stations li:last-child { border-bottom: 1px solid var(--line); }
+.favorite-stations li::before {
+  content: counter(station, decimal-leading-zero);
+  position: absolute;
+  top: 25px;
+  left: 0;
+  font: .75rem Arial, sans-serif;
+  letter-spacing: .06em;
+}
+.favorite-station-name { display: block; font-size: clamp(1.25rem, 2.5vw, 1.8rem); line-height: 1.3; }
+.favorite-station-place { display: block; margin-top: 5px; font: .85rem/1.5 Arial, sans-serif; }
