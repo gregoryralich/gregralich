@@ -289,3 +289,10 @@ a:focus-visible {
   position: absolute;
   left: 0;
 }
+
+/* Documentary stills align with the embedded trailers. */
+.section-content > .documentary-image {
+  width: 100%;
+  max-width: 750px;
+  height: auto;
+}
