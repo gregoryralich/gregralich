@@ -1,0 +1,44 @@
+/* Talkin Trash: shared series index and long-form post layout. */
+.skip-link { position: absolute; left: 20px; top: -100px; padding: 12px; background: var(--cream); color: var(--dark-green); z-index: 10; }
+.skip-link:focus { top: 20px; }
+.trash-page a { text-underline-offset: 4px; }
+.trash-page .trash-hero { min-height: auto; padding-top: 30px; padding-bottom: 65px; }
+.trash-hero .story-nav { margin-bottom: clamp(60px, 9vw, 110px); }
+.trash-hero h1 { font-size: clamp(4rem, 12vw, 9rem); line-height: .92; letter-spacing: -.065em; max-width: 950px; }
+.series-description { font-size: 1.15rem; max-width: 610px; margin: 28px 0 0; }
+.post-meta { font: .85rem/1.65 Arial, Helvetica, sans-serif; margin: 22px 0 0; }
+.post-list { max-width: var(--max-width); margin: 0 auto; padding: 0 var(--side-padding) 80px; }
+.post-list-heading { padding-top: 28px; border-top: 1px solid var(--line); margin-bottom: 30px; }
+.post-list-heading h2 { font-size: 1.8rem; font-weight: normal; margin: 8px 0; }
+.post-card { display: grid; grid-template-columns: 1.05fr 1fr; gap: 35px; padding: 32px 0; border-top: 1px solid var(--line); }
+.post-image { align-self: start; }
+.post-image img { display: block; width: 100%; height: auto; }
+.post-card h2 { font-size: clamp(2rem, 4vw, 3rem); line-height: 1.08; font-weight: normal; letter-spacing: -.035em; margin: 14px 0; }
+.post-card h2 a { text-decoration: none; }
+.post-card h2 a:hover { text-decoration: underline; }
+.post-card-copy > p:not(.eyebrow):not(.post-meta) { font-size: 1.1rem; }
+.read-post { display: inline-block; margin-top: 12px; font: .8rem Arial, Helvetica, sans-serif; text-transform: uppercase; letter-spacing: .07em; }
+.trash-article { max-width: 1000px; margin: 0 auto 70px; padding: 55px clamp(24px, 6vw, 100px); background: var(--cream); color: var(--dark-green); }
+.trash-article a:focus-visible { outline-color: var(--dark-green); }
+.trash-article p, .trash-article li { font-size: 1.15rem; line-height: 1.65; overflow-wrap: anywhere; }
+.article-intro > p:first-child { font-size: 1.4rem; line-height: 1.5; margin-top: 0; }
+.archive-note { font: .85rem/1.7 Arial, Helvetica, sans-serif; padding: 20px; margin: 32px 0; border-left: 3px solid var(--green); background: #e3e7d9; }
+.interview-index { padding: 24px 0 32px; border-block: 1px solid #b6bdab; }
+.interview-index ol { padding-left: 25px; margin-bottom: 0; }
+.interview-index li + li { margin-top: 10px; }
+.interview { padding-top: 60px; margin-top: 45px; border-top: 1px solid #b6bdab; scroll-margin-top: 25px; }
+.interview-heading h2, .next-chapter h2 { font-size: clamp(2.1rem, 5vw, 3.5rem); font-weight: normal; line-height: 1.1; letter-spacing: -.04em; margin: 10px 0 20px; }
+.interview-heading .post-meta { font-size: .8rem; margin-bottom: 35px; }
+.interview-copy img { display: block; max-width: 100%; width: auto; height: auto; max-height: 700px; margin: 0 auto; }
+.interview-copy figure { margin: 35px 0; }
+.interview-copy p:has(> strong:only-child) { margin-top: 30px; }
+.back-to-index { margin-top: 32px; }
+.back-to-index a { font: .8rem Arial, Helvetica, sans-serif; }
+.next-chapter { border-top: 1px solid #b6bdab; padding-top: 45px; margin-top: 60px; }
+@media (max-width: 700px) {
+  .post-card { grid-template-columns: minmax(0, 1fr); gap: 22px; }
+  .trash-hero h1 { font-size: clamp(3.6rem, 15vw, 6rem); }
+  .trash-article { margin-bottom: 0; padding-block: 35px; }
+  .interview { padding-top: 35px; margin-top: 35px; }
+  .trash-article p, .trash-article li { font-size: 1.08rem; }
+}
